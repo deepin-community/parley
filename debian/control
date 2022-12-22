@@ -1,0 +1,61 @@
+Source: parley
+Section: kde
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Norbert Preining <norbert@preining.info>
+Build-Depends: cmake (>= 3.5.0~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.22.0~),
+               gettext,
+               kross-dev (>= 5.22.0~),
+               libkeduvocdocument-dev (>= 4:16.08),
+               libkf5config-dev (>= 5.22.0~),
+               libkf5coreaddons-dev (>= 5.22.0~),
+               libkf5crash-dev (>= 5.22.0~),
+               libkf5doctools-dev (>= 5.22.0~),
+               libkf5i18n-dev (>= 5.22.0~),
+               libkf5kcmutils-dev (>= 5.22.0~),
+               libkf5kio-dev (>= 5.22.0~),
+               libkf5newstuff-dev (>= 5.22.0~),
+               libkf5notifications-dev (>= 5.22.0~),
+               libkf5sonnet-dev (>= 5.22.0~),
+               libkf5xmlgui-dev (>= 5.22.0~),
+               libqt5svg5-dev (>= 5.10.0~),
+               libxml2-dev,
+               libxslt-dev,
+               pkg-config,
+               pkg-kde-tools (>> 0.15.15),
+               qtbase5-dev (>= 5.10.0~),
+               qtmultimedia5-dev (>= 5.10.0~),
+               qtwebengine5-dev (>= 5.10.0~),
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://kde.org/applications/education/org.kde.parley
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/parley.git
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/parley
+
+Package: parley
+Architecture: any
+Depends: kdeedu-kvtml-data,
+         kross,
+         parley-data (>= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Recommends: krosspython
+Suggests: khelpcenter
+Replaces: parley-data (<< 4:17.08.1)
+Breaks: parley-data (<< 4:17.08.1)
+Description: vocabulary trainer
+ Parley is a utility to help train vocabulary when learning a foreign language.
+ It is intended as a replacement for flash cards.
+ .
+ This package is part of the KDE education module.
+
+Package: parley-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: data files for the Parley vocabulary trainer
+ This package contains architecture-independent data files for the Parley
+ vocabulary trainer.
+ .
+ This package is part of the KDE education module.

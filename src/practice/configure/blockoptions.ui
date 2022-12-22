@@ -1,0 +1,264 @@
+<ui version="4.0" >
+ <class>BlockOptionsBase</class>
+ <widget class="QWidget" name="BlockOptionsBase" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>486</width>
+    <height>412</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="leftMargin" >
+    <number>0</number>
+   </property>
+   <property name="topMargin" >
+    <number>0</number>
+   </property>
+   <property name="rightMargin" >
+    <number>0</number>
+   </property>
+   <property name="bottomMargin" >
+    <number>0</number>
+   </property>
+   <property name="horizontalSpacing" >
+    <number>6</number>
+   </property>
+   <property name="verticalSpacing" >
+    <number>6</number>
+   </property>
+   <item row="7" column="2" >
+    <widget class="KComboBox" name="expire2" />
+   </item>
+   <item row="2" column="2" >
+    <widget class="KComboBox" name="expire7" />
+   </item>
+   <item row="7" column="0" >
+    <widget class="QLabel" name="l_lev2" >
+     <property name="text" >
+      <string>Level &amp;2:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>block2</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2" >
+    <widget class="KComboBox" name="expire1" />
+   </item>
+   <item row="4" column="0" >
+    <widget class="QLabel" name="l_lev5" >
+     <property name="text" >
+      <string>Level &amp;5:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>block5</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" >
+    <widget class="QLabel" name="l_lev6" >
+     <property name="text" >
+      <string>Level &amp;6:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>block6</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" >
+    <widget class="QCheckBox" name="kcfg_Expire" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>E&amp;xpiring</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" >
+    <widget class="KComboBox" name="block4" />
+   </item>
+   <item row="0" column="1" >
+    <widget class="QCheckBox" name="kcfg_Block" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text" >
+      <string>Bl&amp;ocking</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1" >
+    <widget class="KComboBox" name="block1" />
+   </item>
+   <item row="2" column="1" >
+    <widget class="KComboBox" name="block7" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" >
+    <widget class="KComboBox" name="expire6" />
+   </item>
+   <item row="5" column="0" >
+    <widget class="QLabel" name="l_lev4" >
+     <property name="text" >
+      <string>Level &amp;4:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>block4</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" >
+    <widget class="QLabel" name="l_lev7" >
+     <property name="text" >
+      <string>Level &amp;7:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>block7</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2" >
+    <widget class="KComboBox" name="expire5" />
+   </item>
+   <item row="6" column="1" >
+    <widget class="KComboBox" name="block3" />
+   </item>
+   <item row="7" column="1" >
+    <widget class="KComboBox" name="block2" />
+   </item>
+   <item row="5" column="2" >
+    <widget class="KComboBox" name="expire4" />
+   </item>
+   <item row="8" column="0" >
+    <widget class="QLabel" name="l_lev1" >
+     <property name="text" >
+      <string>Level &amp;1:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>block1</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType" >
+      <enum>QSizePolicy::Minimum</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>41</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="6" column="2" >
+    <widget class="KComboBox" name="expire3" />
+   </item>
+   <item row="4" column="1" >
+    <widget class="KComboBox" name="block5" />
+   </item>
+   <item row="3" column="1" >
+    <widget class="KComboBox" name="block6" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" >
+    <widget class="QLabel" name="l_lev3" >
+     <property name="text" >
+      <string>Level &amp;3:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>block3</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0" colspan="3" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType" >
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>380</width>
+       <height>30</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1" >
+    <widget class="QLabel" name="label" >
+     <property name="text" >
+      <string>Do not practice vocabulary that has been asked within:</string>
+     </property>
+     <property name="wordWrap" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" >
+    <widget class="QLabel" name="label_2" >
+     <property name="text" >
+      <string>Vocabulary drops one grade after this much time:</string>
+     </property>
+     <property name="wordWrap" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+  <customwidgets>
+  <customwidget>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>kcfg_Block</tabstop>
+  <tabstop>kcfg_Expire</tabstop>
+  <tabstop>block7</tabstop>
+  <tabstop>expire7</tabstop>
+  <tabstop>block6</tabstop>
+  <tabstop>expire6</tabstop>
+  <tabstop>block5</tabstop>
+  <tabstop>expire5</tabstop>
+  <tabstop>block4</tabstop>
+  <tabstop>expire4</tabstop>
+  <tabstop>block3</tabstop>
+  <tabstop>expire3</tabstop>
+  <tabstop>block2</tabstop>
+  <tabstop>expire2</tabstop>
+  <tabstop>block1</tabstop>
+  <tabstop>expire1</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

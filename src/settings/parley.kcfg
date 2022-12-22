@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <include>qfontdatabase.h</include>
+  <kcfgfile name="parleyrc"/>
+
+  <group name="General">
+    <entry name="Theme" type="String">
+      <label>Theme to use for practice and welcome screen</label>
+      <default>themes/theme_reference.desktop</default>
+    </entry>
+    <entry name="NumPreSetting" type="Int">
+      <label>Number of stored setting profiles</label>
+      <default>0</default>
+    </entry>
+    <entry name="SmartAppend" type="Bool">
+      <label>If true, when using the entry dialog, new rows will be appended as needed</label>
+      <default>true</default>
+    </entry>
+    <entry name="Separator" type="String">
+      <label>This sets the separator used when copying/pasting text, default is Tab</label>
+      <default code="true">QChar('\t')</default>
+    </entry>
+    <entry name="EntriesPerLesson" type="Int">
+      <label>The number of entries per unit</label>
+      <default>20</default>
+    </entry>
+    <entry name="AutoOpenLast" type="Bool">
+      <label>If true, on each application start the last opened file will be loaded</label>
+      <default>false</default>
+    </entry>
+    <entry name="AutoSave" type="Bool">
+      <label>If true, vocabularies are automatically saved on close and exit</label>
+      <default>false</default>
+    </entry>
+    <entry name="SeparatorCombo" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="AutoBackup" type="Bool">
+      <label>If true, a backup is saved every BackupTime minutes</label>
+      <default>false</default>
+    </entry>
+    <entry name="BackupTime" type="Int">
+      <label>Time interval between two automatic backups</label>
+      <default>15</default>
+    </entry>
+    <entry name="AutomaticTranslation" type="Bool">
+      <label>Enable automatic translation of the unit entries.</label>
+      <default>false</default>
+    </entry>
+  </group>
+
+  <group name="PracticeOptions">
+    <entry name="FlashcardsFrontImage" type="Bool">
+        <label>Show images on the front of the flashcard.</label>
+        <default>true</default>
+    </entry>
+    <entry name="FlashcardsBackImage" type="Bool">
+        <label>Show images on the back of the flashcard.</label>
+        <default>true</default>
+    </entry>
+    <entry name="Block" type="Bool">
+      <label>In Blocking Query Tab Dialog, if checked then the Query is blocked</label>
+      <default>true</default>
+    </entry>
+    <entry name="Expire" type="Bool">
+      <label>In Blocking Query Tab Dialog, if checked then the Query accepts an expiring time</label>
+      <default>true</default>
+    </entry>
+    <entry name="TestOrderLesson" type="Bool">
+      <label>Append new vocabulary in a collection in order of their units. Note that this will not be a hard transition, but a slow mix from one unit to the next.</label>
+      <default>true</default>
+    </entry>
+    <entry name="TestNumberOfEntries" type="Int">
+      <label>The number of entries that are practiced at the same time. If one of these is answered correctly another entry will be appended.</label>
+      <default>20</default>
+    </entry>
+    <entry name="SwapDirection" type="Bool">
+      <label>Swap direction randomly</label>
+      <default>false</default>
+    </entry>
+
+    <entry name="PracticeTimeout" type="Bool">
+      <label>Limit the time for the user to answer in a test.</label>
+      <default>false</default>
+    </entry>
+    <entry name="PracticeTimeoutMode" type="Enum">
+      <label>Show - show the solution after the given time; Continue - go to the next question after the given time.</label>
+      <choices>
+        <choice name="Show"/>
+        <choice name="Continue"/>
+      </choices>
+      <default>Show</default>
+    </entry>
+    <entry name="PracticeTimeoutTimePerAnswer" type="Int">
+      <label>Maximum time allowed to answer.</label>
+      <default>20</default>
+    </entry>
+
+    <entry name="Suggestions" type="Bool">
+      <label>Enable suggestion lists in written practice.</label>
+      <default>false</default>
+    </entry>
+    <entry name = "ShowHints" type="Bool">
+     <label>Enable the showing of hints.</label>
+     <default>true</default>
+    </entry>
+    <entry name="IgnoreAccentMistakes" type="Bool">
+      <label>Count answers as right when only the accentuation is wrong.</label>
+      <default>false</default>
+    </entry>
+    <entry name="IgnoreCapitalizationMistakes" type="Bool">
+      <label>Count answers as right when only the capitalization is wrong.</label>
+      <default>false</default>
+    </entry>
+    <entry name="IgnorePunctuationMistakes" type="Bool">
+      <label>Count answers as right when only the punctuation is wrong.</label>
+      <default>false</default>
+    </entry>
+
+    <entry name="SplitTranslations" type="Bool">
+      <label>Split translations in written practice.</label>
+      <default>false</default>
+    </entry>
+    <entry name="Periods" type="Bool">
+      <label>Split translations at periods.</label>
+      <default>true</default>
+    </entry>
+    <entry name="Colons" type="Bool">
+      <label>Split translations at colons.</label>
+      <default>false</default>
+    </entry>
+    <entry name="Semicolons" type="Bool">
+      <label>Split translations at semicolons.</label>
+      <default>true</default>
+    </entry>
+    <entry name="Commas" type="Bool">
+      <label>Split translations at commas.</label>
+      <default>false</default>
+    </entry>
+
+    <!-- This will be deprecated in the new partice -->
+    <entry name="ShowMore" type="Bool">
+      <label>Enable Show More button to reveal parts of the solution in written practice.</label>
+      <default>true</default>
+    </entry>
+    <entry name="SkipKnownEnabled" type="Bool">
+      <label>Enable Skip (I Know It) button in written practice.</label>
+      <default>true</default>
+    </entry>
+    <entry name="CountSynonymsAsCorrect" type="Bool">
+      <label>When the synonym instead of the word was entered, does it count as correct?</label>
+      <default>true</default>
+    </entry>
+    <entry name="PracticeImagesEnabled" type="Bool">
+      <label>Enable image display in the practice dialogs.</label>
+      <default>true</default>
+    </entry>
+    <entry name="PracticeSoundEnabled" type="Bool">
+      <label>Enable sound playback in the practice dialogs.</label>
+      <default>true</default>
+    </entry>
+    <entry name="AllowImageInsteadOfWord" type="Bool">
+      <label>Allow using images instead of words in flashcards. This will only be done if there is no word in the entry.</label>
+      <default>false</default>
+    </entry>
+
+    <!-- Sessions -->
+    <entry name="SessionMaxSize" type="Int">
+        <label>The maximum number of words that will be practiced in a training session.</label>
+        <default>20</default>
+    </entry>
+    <entry name="SessionMaxNewWords" type="Int">
+        <label>The maximum number of new (untrained) words that will be used in a training session.</label>
+        <default>5</default>
+    </entry>
+    <entry name="SessionLimitWordsInitialPhase" type="Bool">
+      <label>Limit the number of words in the initial phase.</label>
+      <default>false</default>
+    </entry>
+    <entry name="SessionMaxWordsInitialPhase" type="Int">
+        <label>The maximum number of words in the initial phase. If this limit is exceeded, no new words will be introduced.</label>
+        <default>20</default>
+    </entry>
+
+    <!-- Multiple choice -->
+    <entry name="MultipleChoiceWordTypeConsistancy" type="Bool">
+      <label>Use the same word type as the solution for the incorrect answers in a multiple choice practice.</label>
+      <default>true</default>
+    </entry>
+    <entry name="NumberMultipleChoiceAnswers" type="Int">
+      <label>How many answers are provided for a multiple choice question, including the correct answer.</label>
+      <default>5</default>
+    </entry>
+  </group>
+
+  <group name="Appearance">
+    <entry name="ShowSearch" type="Bool">
+      <label>Toggle display of the search bar.</label>
+      <default>true</default>
+    </entry>
+
+    <entry name="ShowSublessonentries" type="Bool">
+      <label>When enabled a unit also shows entries from its subunits.</label>
+      <default>true</default>
+    </entry>
+
+    <entry name="TableLessonColumnVisible" type="Bool">
+      <label>Show/hide the unit column.</label>
+      <default>false</default>
+    </entry>
+
+    <entry name="TableActiveColumnVisible" type="Bool">
+      <label>Show/hide the active column.</label>
+      <default>false</default>
+    </entry>
+
+    <entry name="LessonEditingSelection" type="Enum">
+      <label>Select which units are displayed for editing</label>
+      <choices>
+        <choice name="CurrentLesson"/>
+        <choice name="LessonsInQuery"/>
+        <choice name="AllLessons"/>
+        <choice name="UserFiltered"/>
+      </choices>
+      <default>CurrentLesson</default>
+    </entry>
+    <entry name="MainWindowSplitter" type="IntList">
+      <label>How the main window is divided.</label>
+      <default>150, 400</default>
+    </entry>
+    <entry name="PracticeFont" type="Font">
+      <label>The font used in the vocabulary table</label>
+      <default code="true">QFontDatabase::systemFont(QFontDatabase::GeneralFont)</default>
+    </entry>
+    <entry name="IPAFont" type="Font">
+      <label>The font used for phonetics</label>
+      <default code="true">QFontDatabase::systemFont(QFontDatabase::GeneralFont)</default>
+    </entry>
+    <entry name="CurrentCol" type="Int">
+      <label>Currently selected column</label>
+      <default code="true">2</default>
+    </entry>
+    <entry name="CurrentRow" type="Int">
+      <label>Currently selected row</label>
+      <default>0</default>
+    </entry>
+    <entry name="GradeColor" type="Color" key="GradeColor">
+      <label>Color used to display the confidence levels</label>
+      <default>25, 140, 25</default>
+    </entry>
+    <entry name="PreGradeColor" type="Color" key="PreGradeColor">
+      <label>Color used to display the early confidence levels</label>
+      <default>255, 255, 0</default>
+    </entry>
+    <entry name="InvalidUnitColor" type="Color" key="InvalidUnitColor">
+      <label>Color used to display invalid units</label>
+      <default>255, 0, 0</default>
+    </entry>
+  </group>
+
+
+  <group name="Thresholds">
+    <entry name="PracticeMinimumTimesAsked" type="Int">
+      <label>The entry must have been asked at least this often to be included in the practice.</label>
+      <default>0</default>
+    </entry>
+    <entry name="PracticeMaximumTimesAsked" type="Int">
+      <label>The entry must have been asked at most this often to be included in the practice.</label>
+      <default>1000</default>
+    </entry>
+
+    <entry name="PracticeMinimumWrongCount" type="Int">
+      <label>The entry must have been answered incorrectly at least this often to be included in the practice.</label>
+      <default>0</default>
+    </entry>
+    <entry name="PracticeMaximumWrongCount" type="Int">
+      <label>The entry must have been answered incorrectly at most this often to be included in the practice.</label>
+      <default>1000</default>
+    </entry>
+
+    <entry name="PracticeMinimumGrade" type="Int">
+      <label>The entry must have at least this confidence level to be included in the practice (0..7).</label>
+      <default>0</default>
+    </entry>
+    <entry name="PracticeMaximumGrade" type="Int">
+      <label>The entry must have at most this confidence level to be included in the practice (0..7).</label>
+      <default>7</default>
+    </entry>
+    <entry name="WordTypesInPracticeEnabled" type="Bool">
+      <label>Only selected word types will be included in practice.</label>
+      <default>false</default>
+    </entry>
+    <entry name="WordTypesInPractice" type="StringList">
+      <label>Selected word types for practices.</label>
+      <whatsthis>Selected word types for practices.</whatsthis>
+    </entry>
+    <entry name="SubWordTypesInPractice" type="StringList">
+      <label>Selected sub word types for practices.</label>
+      <whatsthis>Selected sub word types for practices.</whatsthis>
+    </entry>
+  </group>
+
+  <group name="PracticeManager">
+    <!-- These numbers are indices into the kvtml file. Obviously they may change between files. -->
+    <entry name="LearningLanguage" type="Int">
+      <label>The language that you are learning.</label>
+      <default>0</default>
+    </entry>
+    <entry name="KnownLanguage" type="Int">
+      <label>The language that you know already.</label>
+      <default>1</default>
+    </entry>
+
+    <entry name="ShowSolutionAfterAnswer" type="Bool">
+      <label>Show the solution after an answer was given.</label>
+      <default>true</default>
+    </entry>
+    <entry name="ShowSolutionAfterAnswerTime" type="Int">
+      <label>The time the solution is shown (seconds). 0 is unlimited.</label>
+      <default>0</default>
+    </entry>
+
+    <entry name="PracticeMode" type="Enum">
+        <choices>
+            <choice name="FlashCardsPractice"/>
+            <choice name="MixedLettersPractice"/>
+            <choice name="MultipleChoicePractice"/>
+            <choice name="WrittenPractice"/>
+            <choice name="ExampleSentencesPractice"/>
+            <choice name="GenderPractice"/>
+            <choice name="ComparisonPractice"/>
+            <choice name="ConjugationPractice"/>
+        </choices>
+        <label>The practice method that is currently selected.</label>
+        <default>FlashCardsPractice</default>
+    </entry>
+
+    <entry name="PracticeDirection" type="Enum">
+        <choices>
+            <choice name="KnownToLearning"/>
+            <choice name="LearningToKnown"/>
+            <choice name="MixedDirectionsWordsOnly"/>
+            <choice name="MixedDirectionsWithSound"/>
+        </choices>
+        <label>The practice mode that is currently selected.</label>
+        <default>MixedDirectionsWordsOnly</default>
+    </entry>
+
+    <entry name="BlockItem$(Grade)" type="Int" key="BlockItem$(Grade)">
+      <parameter name="Grade" type="Int" max="7"/>
+      <label>Amount of time different confidence levels should be blocked</label>
+      <default param="1">86400</default>
+      <default param="2">172800</default>
+      <default param="3">345600</default>
+      <default param="4">604800</default>
+      <default param="5">1209600</default>
+      <default param="6">2592000</default>
+      <default param="7">5184000</default>
+    </entry>
+    <entry name="ExpireItem$(Grade)" type="Int" key="ExpireItem$(Grade)">
+      <parameter name="Grade" type="Int" max="7"/>
+      <label>Amount of time after which different confidence levels should expire</label>
+      <default param="1">172800</default>
+      <default param="2">345600</default>
+      <default param="3">604800</default>
+      <default param="4">1209600</default>
+      <default param="5">2592000</default>
+      <default param="6">5184000</default>
+      <default param="7">10368000</default>
+    </entry>
+    <entry name="RememberPracticeDirection" type="Bool">
+      <label>If true, the practice direction for each practice mode is stored.</label>
+      <whatsthis>Should the practice direction for each practice mode be stored?</whatsthis>
+      <default>false</default>
+    </entry>
+    <entry name="PracticeDirectionsByPracticeMode" type="IntList">
+      <label>Stored values of practice direction for each practice mode.</label>
+      <whatsthis>Stored values of practice direction for each practice mode.</whatsthis>
+      <default></default>
+    </entry>
+  </group>
+  <group name="KNewStuff">
+    <entry name="ProvidersUrl" type="Path">
+      <label>The Providers path for Parley</label>
+      <default>"https://edu.kde.org/parley/newstuff/providers.xml"</default>
+    </entry>
+    <entry name="InstallationCommand" type="String">
+      <label>The command used to start a downloaded vocabulary</label>
+      <default>parley %f</default>
+    </entry>
+    <entry name="InstallPath" type="Path">
+      <label>The folder where downloaded vocabularies are saved by default</label>
+      <default>$HOME/Vocabularies/</default>
+    </entry>
+  </group>
+</kcfg>

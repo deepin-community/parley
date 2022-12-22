@@ -1,0 +1,4 @@
+parley-data: unusual-interpreter usr/share/parley/plugins/example.py #!kf5kross
+parley-data: unusual-interpreter usr/share/parley/plugins/google_dictionary.py #!kf5kross
+parley-data: unusual-interpreter usr/share/parley/plugins/leo-dict.py #!kf5kross
+parley-data: unusual-interpreter usr/share/parley/plugins/wiktionary_sound.py #!kross

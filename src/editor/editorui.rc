@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<gui name="editor"  version="6">
+
+<MenuBar>
+  <Menu name="file" >
+      <text>&amp;File</text>
+      <Separator/>
+      <Action name="file_upload" />
+  </Menu>
+  <Menu name="edit" >
+      <text>&amp;Edit</text>
+      <Separator/>
+      <Action name="edit_languages" />
+      <Separator/>
+      <Action name="edit_append" />
+      <Action name="edit_remove_selected_area" />
+      <Separator/>
+      <Action name="tools_spelling" />
+      <Action name="vocab_remove_grades" />
+  </Menu>
+  <Menu name="view" >
+      <text>&amp;View</text>
+      <Action name="show_vocabulary_columns_menu" />
+      <Action name="show_vocabulary_columns_dialog" />
+      <Separator/>
+      <Action name="show_units_dock"/>
+      <Action name="show_wordtype_dock"/>
+      <Action name="show_leitner_dock"/>
+      <Action name="show_summary_dock"/>
+      <Separator/>
+      <Action name="show_image_dock"/>
+      <Action name="show_audio_dock"/>
+      <Action name="show_multiplechoice_dock"/>
+      <Action name="show_pronunciation_dock"/>
+      <Action name="show_latex_dock"/>
+      <Separator/>
+      <Action name="show_synonym_dock"/>
+      <Action name="show_antonym_dock"/>
+      <Action name="show_falsefriend_dock"/>
+      <Separator/>
+      <Action name="show_comparison_dock"/>
+      <Action name="show_inflection_dock"/>
+      <Separator/>
+      <Action name="show_browser_dock"/>
+      <Action name="config_show_search" />
+  </Menu>
+  <Menu name="lesson" >
+   <text>&amp;Unit</text>
+   <Action name="new_lesson" />
+   <Action name="rename_lesson" />
+   <Action name="delete_lesson" />
+   <Separator/>
+   <Action name="split_lesson" />
+   <Separator/>
+   <Action name="remove_grades_lesson" />
+   <Action name="remove_grades_lesson_children" />
+   <Separator/>
+   <Action name="lesson_showsublessonentries" />
+  </Menu>
+  <Menu name="learning" >
+   <text>&amp;Practice</text>
+   <Action name="practice_configure" />
+   <Action name="practice_start" />
+  </Menu>  
+  <Menu name="scripts" >
+    <text>&amp;Scripts</text>
+    <Action name="show_script_manager" />
+    <Separator/>
+    <ActionList name="scripts_actionlist" />
+    <Action name="lesson_automatictranslation" />
+  </Menu>
+ </MenuBar> 
+
+ <ToolBar name="editorToolBar" >
+  <text>Editor Toolbar</text>
+  <Separator/>
+  <Action name="new_lesson" />
+  <Action name="edit_append" />
+  <Separator/>
+  <Action name="practice_start" />
+ </ToolBar>
+</gui>

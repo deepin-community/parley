@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE = 1
+
+# see FEATURE AREAS in dpkg-buildflags(1)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@ --with kf5
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DBUILD_TESTING=OFF
+
+override_dh_auto_test:
+	# Disable dh_auto_test at build time
+	:
+
+execute_after_dh_auto_install:
+	rm debian/tmp/usr/share/parley/plugins/mwclient/LICENSE.md
+	rm debian/tmp/usr/share/parley/plugins/mwclient/README.rst
+	rm debian/tmp/usr/share/parley/plugins/mwclient/six.LICENSE
+	rm debian/tmp/usr/share/parley/plugins/mwclient/six.README

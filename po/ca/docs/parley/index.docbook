@@ -1,0 +1,2963 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE"
+>]>
+
+<book id="parley" lang="&language;">
+
+<bookinfo>
+<title
+>El manual del &parley;</title>
+
+<authorgroup>
+<author
+>&Frederik.Gladhorn; &Frederik.Gladhorn.mail; </author>
+
+<author
+><personname
+><firstname
+>Sabine</firstname
+><surname
+>Eller</surname
+></personname
+> <email
+>s.eller@voxhumanitatis.org</email
+> </author>
+
+<author
+><personname
+><firstname
+>Daniel</firstname
+><surname
+>Laidig</surname
+></personname
+> <email
+>d.laidig@gmx.de</email
+> </author>
+
+<author
+><personname
+><firstname
+>Amarvir</firstname
+><surname
+>Singh</surname
+></personname
+> <email
+>amarvir.ammu.93@gmail.com</email
+> </author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<copyright>
+<year
+>2010</year>
+<holder
+>&Frederik.Gladhorn;</holder>
+</copyright>
+<copyright>
+<year
+>2010</year>
+<holder
+>Sabine Eller</holder>
+</copyright>
+<copyright>
+<year
+>2010</year>
+<holder
+>Daniel Laidig</holder>
+</copyright>
+<copyright>
+<year
+>2014</year>
+<holder
+>Amarvir Singh</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>12 de maig de 2016</date>
+<releaseinfo
+>2.10 (Aplicacions 16.04)</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para
+>&parley; és un entrenador de vocabulari. Us ajuda a memoritzar el vostre vocabulari, per exemple, quan esteu aprenent un idioma estranger. &parley; no es limita a l'aprenentatge d'idiomes, ja que és compatible amb una multitud d'assumptes. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Parley</keyword>
+<keyword
+>vocabulari</keyword>
+<keyword
+>entrenament</keyword>
+<keyword
+>aprenentatge</keyword>
+</keywordset>
+<!-- https://bugs.kde.org/show_bug.cgi?id=281586#c2 adjustable font size for practice window for better reading on highres screens -->
+</bookinfo>
+<!--userbase <timestamp
+>2010-06-25T18:39:29Z</timestamp
+>-->
+
+<!--userbase-content-->
+<chapter id="introduction"
+><title
+>Introducció</title>
+<para
+>&parley; és un entrenador de vocabulari. Us ajuda a memoritzar el vostre vocabulari, per exemple, quan esteu aprenent un idioma estranger. Podeu crear les vostres pròpies col·leccions de vocabulari amb les paraules que us calen, o triar entre una gran varietat de <ulink url="https://userbase.kde.org/Parley#Vocabulary_Collections"
+>col·leccions de vocabulari</ulink
+> disponibles. On trobareu les col·leccions que contenen vocabulari de l'idioma i també anatomia, música, geografia, química o preparació d'exàmens. </para>
+<para
+>&parley; és molt flexible i utilitza un <ulink url="https://en.wikipedia.org/wiki/Flashcard"
+>mètode d'aprenentatge basat en fitxes ràpides</ulink
+>. Realitza un seguiment automàtic del vostre progrés en l'aprenentatge. Amb &parley; podreu arreglar el vostre vocabulari com vulgueu, crear les vostres pròpies lliçons, segons sigui necessari. Però a diferència de les fitxes ràpides reals podeu utilitzar diferents mètodes d'aprenentatge amb &parley;. </para>
+<para
+>Les fitxes ràpides contenen expressions en l'anvers i la seva traducció al revers. Comenceu amb una pila de targetes. Si coneixeu la traducció d'una targeta, podreu posar-la en una segona pila de fitxes. Si no la recordeu, manteniu-la en la primera pila per tornar-ho a intentar més tard. </para>
+<para
+>L'objectiu principal de &parley; no és ensenyar-vos la gramàtica. Tanmateix, hi ha algunes formes d'exercici que us poden ajudar en aquesta matèria. </para>
+<para
+>&parley; consta de dues grans parts: <link linkend="practice"
+>Pràctica del vocabulari</link
+> i un <link linkend="vocabulary-editing"
+>Editor per a col·leccions de vocabulari</link
+>. </para>
+<para
+>En aquest manual, el terme de <emphasis
+>Col·lecció de vocabulari</emphasis
+> es refereix a un fitxer que conté <emphasis
+>Unitats</emphasis
+>. Cada unitat pot ser una lliçó o una col·lecció de classes imbricades a qualsevol profunditat. A la resta d'aquest manual es fa referència a les unitats en lloc de lliçons, ja que també es poden utilitzar per a altres fins. </para>
+<para
+>Tots dos, tant a l'Editor com a l'Exercici es pot arribar des del <link linkend="practice-overview"
+>Resum de l'exercici</link
+>. </para>
+<para
+><link linkend="practice"
+>Exercici</link
+> consta de tres parts: la primera <link linkend="practice-overview"
+>Resum de l'exercici</link
+> en la qual escolliu quin exercici realitzar. A partir d'aquí començareu amb l'<link linkend="practice"
+>Exercici</link
+> actual i una vegada acabeu, obtindreu un <link linkend="summary-after-practice"
+>Resum</link
+>. </para>
+<tip>
+<para
+>Igual que en totes les aplicacions intenteu utilitzar el clic dret si esteu explorant les característiques i funcionalitats al &parley;. El clic dret mostra un <quote
+>menú contextual</quote
+> que ens indicarà el que podem fer amb la situació actual. Intenteu fer clic dret sobre les unitats i les paraules per trobar algunes opcions. </para>
+</tip>
+</chapter>
+<chapter id="dashboard"
+><title
+>Tauler</title>
+<para
+>Al primer inici del &parley; us donarà la benvinguda amb el <guilabel
+>Tauler de comandaments</guilabel
+>. </para>
+<para
+>En un primer moment el <guilabel
+>Tauler de comandaments</guilabel
+> estarà buida, un cop obriu algunes col·leccions de vocabulari, us mostrarà en quines heu treballat recentment. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="dashboard.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Una col·lecció de vocabulari és un fitxer que conté paraules i les seves traduccions a altres idiomes o altres parells de paraules i frases que desitgeu memoritzar. Les paraules s'organitzen en unitats. </para>
+<para
+>Per <emphasis
+>començar a practicar</emphasis
+>, feu clic a <guilabel
+>Exercici</guilabel
+> sobre una de les col·leccions de vocabulari a la llista. Us portarà al <link linkend="practice-overview"
+>Resum de l'exercici</link
+>. </para>
+<para
+>Tingueu en compte que apareixerà un petit <guilabel
+>Elimina la icona</guilabel
+> a l'esquerra del nom del document. <guilabel
+>Elimina la icona</guilabel
+> permet eliminar la col·lecció de la llista. </para>
+<para
+>Si us agradaria començar la vostra pròpia col·lecció de vocabulari, feu clic a <guilabel
+>Crea una nova col·lecció</guilabel
+>. </para>
+<para
+>També podeu <link linkend="open-an-existing-collection"
+>obrir una col·lecció</link
+> si ja la teniu al vostre ordinador, però no és a la llista. </para>
+<para
+>L'últim botó del <guilabel
+>Tauler</guilabel
+> ofereix baixar col·leccions de vocabulari realitzades per altra gent. Una vegada creat un fitxer que us agradaria compartir, el podreu publicar amb facilitat des de l'editor. </para>
+<para
+>&parley; ve amb diferents temes, podeu canviar a un estil gràfic diferent en la configuració. Per a més informació, veure <link linkend="configure-parley"
+>Configurar &parley;</link
+>. </para>
+</chapter>
+<chapter id="open-an-existing-collection"
+><title
+>Obre una col·lecció ja existent</title>
+<para
+>Suposem que la vostra col·lecció ja es troba al disc dur. </para>
+<para
+>Això és el que es veurà a la pantalla la primera vegada que inicieu &parley;: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="initial_screen.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Feu clic a <guilabel
+>Obre una col·lecció ja existent</guilabel
+>. </para>
+<para
+>Al diàleg de selecció de fitxers, navegueu fins a la carpeta que conté el fitxer de dades, i seleccioneu-la fent clic sobre seu. Depenent del vostre sistema el fitxer s'obrirà immediatament, o haureu de fer clic a <guilabel
+>D'acord</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="file_select_dialog.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ara, es carregarà el fitxer, i passareu a la pantalla <guilabel
+>Resum de l'exercici</guilabel
+>: vegeu la següent secció per a més detalls. </para>
+</chapter>
+<chapter id="vocabulary-practice"
+><title
+>Practicar el vocabulari</title>
+<para
+>Per iniciar l'exercici seleccioneu un document després d'iniciar &parley;. Si ja el teniu obert a l'editor, simplement feu clic a <guilabel
+>Exercici</guilabel
+> a la barra d'eines. </para>
+<sect1 id="practice-overview"
+><title
+>Resum de l'exercici</title>
+<para
+>Abans d'iniciar l'exercici real, sempre obtindreu la pàgina de Resum de l'exercici. Hi ha tres àrees que us permeten escollir quin exercici realitzar: </para>
+<itemizedlist>
+<listitem
+><para
+>La selecció d'idiomes </para
+></listitem>
+<listitem
+><para
+>La selecció del mode de l'exercici </para
+></listitem>
+<listitem
+><para
+>La selecció de les unitats que també mostren el vostre progrés actual </para
+></listitem>
+</itemizedlist>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="configure_practice.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>A l'esquerra es poden seleccionar la combinació d'idiomes que es practiquen. Si seleccioneu, per exemple, anglès al francès, se us mostraran les paraules en anglès i &parley; us demanarà que introduïu les traduccions al francès. </para>
+<para
+>Sota la selecció d'idiomes escolliu el mode de l'exercici. El <guilabel
+>Mode exercici</guilabel
+> determina com practicareu el que us preguntin. </para>
+<para
+>La llista desplegable <guilabel
+>Direcció de l'exercici</guilabel
+> es pot utilitzar per a seleccionar la consulta que es mostrarà durant l'exercici. Les opcions possibles són la frase coneguda (<guimenuitem
+>Ja s'ha après</guimenuitem
+>), la frase d'aprenentatge (<guimenuitem
+>Per aprendre</guimenuitem
+>), o la barreja de les frases (<guimenuitem
+>Direccions fusionades</guimenuitem
+>). </para>
+<para
+>En la gran part de la dreta, veureu les unitats de la col·lecció de vocabulari. Podeu seleccionar les unitats a practicar amb la casella de selecció al davant del nom de la unitat. El nombre de paraules que conté cada unitat es mostra al costat del seu nom. A la dreta del nom veureu el vostre progrés actual en la unitat. </para>
+<para
+>El progrés de cada unitat es mostra com el percentatge completat de la unitat i les barres de progrés en diversos colors. El percentatge es calcula tenint en compte el nombre total de paraules que hi ha a la unitat i els nivells de confiança per a cada paraula. Les barres de progrés representen el nombre de paraules en cada nivell de confiança, amb un to més fosc que representa una confiança. També es pot veure una llegenda a la part superior de les seleccions de la unitat, a la capçalera. Els colors d'aquesta llegenda es corresponen amb els colors a les barres de progrés, des de les paraules apreses plenament fins a les paraules que encara no s'han practicat. </para>
+</sect1>
+<sect1 id="advanced-practice-configuration"
+><title
+>Configuració de l'exercici</title>
+<para
+>La <guilabel
+>Configuració de l'exercici</guilabel
+> permet especificar les opcions més avançades que afectaran l'exercici. </para>
+<para
+>La pàgina <link linkend="practice-overview"
+>Resum de l'exercici</link
+> ens du a la <guilabel
+>Configuració de l'exercici</guilabel
+> amb el botó <guilabel
+>Configura l'exercici</guilabel
+> a la barra d'eines. </para>
+<sect2 id="general-practice-settings"
+><title
+>Arranjament general de l'exercici</title>
+<para
+>Podeu trobar diverses opcions de configuració generals per a l'exercici a la pàgina de configuració general. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="configure_general.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Les opcions més importants són: </para>
+<itemizedlist>
+<listitem
+><para
+>Ignora els errors d'accents: amb aquesta opció si introduïu una paraula amb <guilabel
+>e</guilabel
+> en lloc de <guilabel
+>é</guilabel
+> encara es comptarà com a correcta. </para
+></listitem>
+<listitem
+><para
+>Ignora els errors de majúscules i minúscules: aquesta opció us permetrà fer cas omís de les majúscules i minúscules en introduir les paraules. </para
+></listitem>
+<listitem
+><para
+>Imatges i sons: si activeu les imatges, llavors seran mostrades durant l'exercici, si estan disponibles. El mateix s'aplicarà per als sons. </para
+></listitem>
+<listitem
+><para
+>Permet imatges en lloc de paraules: si s'habilita aquesta opció, es permetrà que s'utilitzi una imatge com a pregunta durant l'exercici, sempre que no s'hagi assignat una traducció a aquesta paraula per a l'idioma de destinació. </para
+></listitem>
+</itemizedlist>
+<!--FIXME Enable Hints Sessions Synonyms-->
+</sect2>
+<sect2 id="blocking"
+><title
+>Bloquejar</title>
+<para
+>Si penseu a practicar el vostre vocabulari amb regularitat, haureu d'assegurar-vos que la característica de <emphasis
+>bloqueig</emphasis
+> està activada. Ara cal que aneu a la pàgina de bloqueig i marqueu la casella de selecció que diu <guilabel
+>Bloqueig</guilabel
+>. Ara fins i tot es pot configurar l'interval en què es repetiran les paraules respostes correctament. </para>
+<para
+><emphasis
+>Bloqueig</emphasis
+> vol dir que les paraules no se us preguntaran per un període de temps després de l'últim exercici. Aquest període de temps dependrà de si coneixíeu la paraula, de manera que les paraules que no coneixeu se us preguntaran més sovint. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="configure_blocking.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<!--FIXME Expiring-->
+</sect2>
+<sect2 id="thresholds"
+><title
+>Llindars</title>
+<para
+>Els llindars són una altra forma de limitar el que voleu practicar. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="configure_thresholds.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Podeu decidir practicar només les paraules que coneixeu millor o pitjor que un cert nivell de confiança. O també podeu seleccionar només les paraules que heu practicat un nombre determinat de vegades. </para>
+</sect2>
+<sect2 id="specific-practice-settings"
+><title
+>Arranjament específic de l'exercici</title>
+<para
+>Les opcions de configuració per a l'exercici amb múltiples opcions es poden canviar emprant la pàgina de configuració específica. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="configure_specific.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Aquí podeu seleccionar si les eleccions han de ser del mateix tipus, així com el nombre d'opcions. </para>
+</sect2>
+</sect1>
+<sect1 id="practice"
+><title
+>Exercici</title>
+<sect2 id="flash-cards"
+><title
+>Fitxes ràpides</title>
+<para
+>Després d'haver activat el mode de l'exercici <guilabel
+>Fitxa ràpida</guilabel
+> i d'haver fet clic a <guilabel
+>Inicia l'exercici</guilabel
+> es mostrarà la següent pantalla. El mode d'entrenament fitxa ràpida funciona com si ho féssiu amb fitxes ràpides <quote
+>reals</quote
+>. Us imagineu el resultat i si voleu una mica d'ajuda, podeu fer clic a <guilabel
+>Pista</guilabel
+>, el qual començarà a donar una lletra del resultat cada vegada. </para>
+<para
+>També podeu decidir ometre per ara una paraula. En fer clic a <guilabel
+>Respondré més tard</guilabel
+> la paraula tornarà a aparèixer en un moment posterior. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="practice_grey.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>En fer clic a <guilabel
+>Continua</guilabel
+> es revelarà la solució. En aquesta etapa haureu de dir si coneixíeu la resposta. </para>
+<para
+>Si no la sabíeu, feu clic a <guilabel
+>No ho sabia</guilabel
+>. Si recordàveu la resposta, feu clic a <guilabel
+>Ho sabia</guilabel
+>. </para>
+<para
+>D'aquesta manera anireu a la següent pregunta. </para>
+<para
+>A la part inferior del costat esquerre de la pantalla disposeu de 7 quadres que mostren com de bé coneixeu el vocabulari. Aquestes 7 quadres es corresponen als nivells de bloqueig establerts a <link linkend="blocking"
+><guilabel
+>Bloqueig</guilabel
+></link
+> a la <guilabel
+>Configuració de l'exercici</guilabel
+>. </para>
+<tip
+><para
+>En lloc de fer clic a <guilabel
+>Continua</guilabel
+> també podeu utilitzar la tecla <keycap
+>Espai</keycap
+> del teclat. </para
+></tip>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="practice_flash_solution.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Podeu aturar l'exercici en qualsevol moment fent clic a <guilabel
+>Atura l'exercici</guilabel
+>. </para>
+</sect2>
+<sect2 id="mixed-letters"
+><title
+>Lletres barrejades</title>
+<para
+>Barrejar les lletres és un mètode d'entrenament que us ofereix una ajuda immediata: totes les lletres que formen part de la solució es mostraran barrejades: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="mixed_letters_hint.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Si voleu una mica d'ajuda, podeu fer clic a <guilabel
+>Pista</guilabel
+> i se us donarà una lletra de la solució cada vegada. Per descomptat, també podreu optar per <guilabel
+>Respondré més tard</guilabel
+> fent clic sobre aquest botó. </para>
+<para
+>Per donar la resposta escriviu-la al camp en blanc sota de les lletres barrejades i premeu la tecla &Intro; o el botó <guilabel
+>Continua</guilabel
+>. </para>
+<para
+>Si la vostra resposta ha estat correcta el &parley; us ho dirà i podreu prémer &Intro; o fer clic a <guilabel
+>Continua</guilabel
+> per seguir endavant amb la següent pregunta. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="mixed_letters_right.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>En cas d'introduir una resposta incorrecta, se us indicarà <emphasis
+>torneu-ho a provar</emphasis
+>: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="mixed_letters_wrong.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Si no coneixeu la resposta, feu clic a <guilabel
+>Continua</guilabel
+> per segona vegada. A continuació es mostrarà la solució. Seguiu endavant amb <guilabel
+>Continua</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="mixed_letters_solution.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<!--FIXME the icons are not displayed in parley
+> 15.12 -->
+<para
+>Podeu fer cas omís de com es compta la vostra resposta. Veure <link linkend="counting-an-answer-as-right"
+>Comptar una resposta com a correcta</link
+>. </para>
+</sect2>
+<sect2 id="multiple-choice"
+><title
+>Elecció múltiple</title>
+<sect3 id="automatic-selection-of-the-possible-answers"
+><title
+>Selecció automàtica de les possibles respostes</title>
+<para
+>En el mode <guilabel
+>Elecció múltiple</guilabel
+> se us mostraran una sèrie de respostes possibles, de les quals només una serà la correcta. En fer clic a <guilabel
+>Pista</guilabel
+>, &parley; exclourà una de les respostes incorrectes, de manera que la vostra elecció es tornarà més i més restringida amb cada clic. La resposta només es revelarà quan només falti una opció i la qüestió es comptarà com a incorrecta. Per descomptat, també podreu optar per <guilabel
+>Respondré més tard</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="multiple_choice.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Un cop feta la vostra elecció feu clic sobre la que creieu que és correcta o escriviu el número al davant de l'elecció, el &parley; mostrarà sota la pantalla si la resposta era correcta. Seguiu endavant amb la següent pregunta fent clic a <guilabel
+>Continua</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="multiple_choice-right.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Si la vostra resposta estava equivocada, es mostrarà la resposta correcta en color verd i en vermell la incorrecta. També en aquest cas seguireu endavant fent clic a <guilabel
+>Continua</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="multiple_choice-wrong.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<!--FIXME the icons are not displayed in parley
+> 15.12 -->
+<para
+>Podeu fer cas omís de com es compta la vostra resposta. Veure <link linkend="counting-an-answer-as-right"
+>Comptar una resposta com a correcta</link
+>. </para>
+<para
+>Si voleu aturar l'exercici, només cal fer clic al botó <guilabel
+>Atura l'exercici</guilabel
+>. </para>
+</sect3>
+<sect3 id="with-yes-no-answers"
+><title
+>Amb respostes sí/no</title>
+<para
+>Normalment el &parley; proposa automàticament una resposta correcta i diverses errònies en el mode d'elecció múltiple. Per a alguns exercicis tindreu respostes predeterminades, com sí/no o similar. I per aquestes haureu de configurar l'exercici fent clic a <link linkend="advanced-practice-configuration"
+><guilabel
+>Configura l'exercici</guilabel
+></link
+>. </para>
+<para
+>Seleccioneu la pestanya <guilabel
+>específica</guilabel
+> i obtindreu quelcom semblant a la següent captura de pantalla: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="configure_specific.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Si només teniu <emphasis
+>dues opcions</emphasis
+>, com <emphasis
+>sí/no</emphasis
+> a la secció <guilabel
+>Elecció Múltiple</guilabel
+>, establiu <guilabel
+>Nombre d'opcions</guilabel
+> a <guilabel
+>2</guilabel
+>. </para>
+</sect3>
+</sect2>
+<sect2 id="written"
+><title
+>Escrita</title>
+<para
+>Quan seleccioneu l'opció <guilabel
+>Escrita</guilabel
+> per a realitzar l'exercici haureu d'escriure la solució. Podeu utilitzar el botó <guilabel
+>Pista</guilabel
+>, el qual començarà a donar-vos el resultat una lletra cada vegada. Per descomptat, també podreu optar per respondre després fent clic sobre el botó <guilabel
+>Respondré més tard</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="practice_written.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Una vegada introduïda la solució, feu clic a <guilabel
+>Continua</guilabel
+> i &parley; mostrarà si la vostra resposta era correcta. Seguiu endavant fent clic a <guilabel
+>Continua</guilabel
+> una altra vegada. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="practice_written_right.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>En cas de donar una resposta errònia, ho podreu tornar a intentar diverses vegades fins a trobar la resposta correcta. Si no ho intenteu de nou, i feu clic a <guilabel
+>Continua</guilabel
+>, es mostrarà la solució. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="practice_written_wrong.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Seguiu endavant amb l'exercici fent clic a <guilabel
+>Continua</guilabel
+> o atureu-lo fent clic al botó <guilabel
+>Atura l'exercici</guilabel
+>. </para>
+<para
+>Quan es reveli la solució, veureu una gran icona a la dreta indicant si la resposta es considerarà com a correcta o incorrecta. </para>
+<para
+>Podeu fer cas omís de com es compta la vostra resposta. Veure <link linkend="counting-an-answer-as-right"
+>Comptar una resposta com a correcta</link
+>. </para>
+</sect2>
+<!--FIXME the icons are not displayed in parley
+> 15.12 -->
+<sect2 id="counting-an-answer-as-right"
+><title
+>Comptar una resposta com a correcta</title>
+<para
+>Una vegada revelada la solució, veureu una gran icona a la dreta que ens indicarà si la resposta es considerarà com a correcta o incorrecta. </para>
+<para
+>Si veieu la gran marca de selecció, &parley; pensa que teníeu raó. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_practice_icon_right.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Si us cal més d'un intent per respondre correctament, la vostra resposta serà comptada com a incorrecta. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_practice_icon_wrong.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Podeu fer clic sobre la petita icona al costat de l'indicador per canviar la forma com es compten les vostres respostes. El símbol gran sempre indica com s'ha comptat la resposta. </para>
+</sect2>
+
+<sect2 id="reset-practice-to-initial-state"
+><title
+>Restablir l'exercici a l'estat inicial</title>
+<para
+>Pot restablir totes les vostres puntuacions de l'exercici (treu els nivells de confiança) a l'estat inicial. Podeu restablir els nivells de confiança per a unitats individuals dins de <guilabel
+>Resum de l'exercici</guilabel
+>, feu clic dret sobre la unitat per a restablir-les i escolliu <guilabel
+>Elimina els nivells de confiança d'aquesta unitat</guilabel
+>, o seleccionant l'element de menú <menuchoice
+><guimenu
+>Unitat</guimenu
+><guimenuitem
+>Elimina els nivells de confiança</guimenuitem
+></menuchoice
+> o <menuchoice
+><guimenu
+>Unitat</guimenu
+><guimenuitem
+>Elimina els nivells de confiança d'aquesta unitat i totes les subunitats</guimenuitem
+></menuchoice
+> quan s'està en el mode d'edició. </para>
+</sect2>
+</sect1>
+<sect1 id="summary-after-practice"
+><title
+>Resum després de l'exercici</title>
+<para
+>El resum es mostra en acabar una sessió d'aprenentatge. En la gran barra a la part superior se us mostrarà el bé que ho heu fet. </para>
+<para
+>A sota hi haurà una taula amb totes les paraules que heu practicat, juntament amb els errors que heu comès. </para>
+<para
+>Les paraules amb més errors restaran a la part superior de manera que pugueu veure les que encara no coneixeu. </para>
+<para
+>Premeu el botó <guibutton
+>Exporta els resultats</guibutton
+> o utilitzeu l'element de menú <menuchoice
+><guimenu
+>Pràctica</guimenu
+><guimenuitem
+>Exporta els resultats...</guimenuitem
+></menuchoice
+> per exportar els resultats de la pràctica com a &HTML; o a un fitxer de text OpenDocument (<filename role="extension"
+>.odt</filename
+>). </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="practice_summary.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect1>
+<!--FIXME Example Sentences practice missing -->
+<sect1 id="grammar-practice-modes"
+><title
+>Modes d'exercici gramaticals</title>
+<para
+>Amb &parley; també es poden aprendre determinades estructures gramaticals, com ara el gènere dels substantius, les formes comparatives dels adjectius i la conjugació dels verbs. Vegem-ne alguns exemples. </para>
+<sect2 id="articles-and-gender-of-nouns"
+><title
+>Els articles i el gènere dels substantius</title>
+<para
+>Una vegada s'ha activat el mode d'exercici <guilabel
+>Gènere dels substantius</guilabel
+>, feu clic a <guilabel
+>Inicia l'exercici</guilabel
+>. </para>
+<para
+>En el següent cas s'utilitza l'alemany com a idioma per aprendre, així que hi ha tres gèneres per triar: masculí, femení i neutre. En fer clic a <guilabel
+>Pista</guilabel
+> s'exclourà una de les respostes errònies. Per descomptat, també podreu optar per <guilabel
+>Respondré més tard</guilabel
+> fent clic sobre aquest botó. </para>
+<para
+>Haureu d'introduir els articles per a l'idioma en l'editor per veure els articles en lloc dels termes del gènere gramatical. Penseu també en què això sols funcionarà si el gènere de les paraules s'ha configurat correctament. Veure <link linkend="word-types"
+>Tipus de paraules</link
+> per obtenir més informació sobre com canviar el tipus de paraula al gènere correcte. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="articles_and_gender.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Quan doneu la resposta correcta es mostrarà el següent i seguireu practicant fent clic a <guilabel
+>Continua</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="articles_and_gender_right.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Si doneu la resposta incorrecta es mostrarà el següent i seguireu practicant fent clic a <guilabel
+>Continua</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="articles_and_gender_wrong.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Podeu aturar l'exercici en qualsevol moment fent clic a <guilabel
+>Atura l'exercici</guilabel
+>. </para>
+</sect2>
+<sect2 id="comparison-forms-of-adjectives-and-adverbs"
+><title
+>Formes comparatives d'adjectius i adverbis</title>
+<para
+>A la pantalla <guilabel
+>Exercici</guilabel
+> seleccioneu <guilabel
+>Formes comparatives</guilabel
+> i després feu clic a <guilabel
+>Inicia l'exercici</guilabel
+> per seguir endavant. </para>
+<para
+>Això només funciona quan les formes de conjugació de la paraula s'han introduït en la col·lecció de vocabulari. Veure <link linkend="entering-comparison-forms"
+>Introduir les formes comparatives</link
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="comparison.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>L'exercici requereix que introduïu les formes comparatives per al terme mostrat. En aquest cas, la traducció de la paraula en anglès «<emphasis
+>old</emphasis
+>» a l'alemany. L'idioma alemany té tres formes: <emphasis
+>absoluta, comparativa</emphasis
+> i <emphasis
+>superlativa</emphasis
+>. Per seguir endavant amb l'exercici simplement feu clic a <guilabel
+>Continua</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="comparison_right.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+<sect2 id="conjugations"
+><title
+>Conjugacions</title>
+<para
+>Per practicar la conjugació escolliu el mode <guilabel
+>Conjugacions</guilabel
+> i els temps que desitgeu exercitar. </para>
+<para
+>En el document s'han d'introduir les formes de conjugació de les paraules per tal de permetre que aquest mode d'exercici funcioni. Veure <link linkend="entering-inflection-forms"
+>Introduir les formes d'inflexió</link
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Configure_practice_conjugation.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Després feu clic a <guilabel
+>Inicia l'exercici</guilabel
+>. Estareu obligat a introduir les formes de conjugació correctes d'acord amb el temps que es mostri. Per seguir endavant feu clic a <guilabel
+>Continua</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_practice_conjugation.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+</sect1>
+</chapter>
+<chapter id="vocabulary-editing"
+><title
+>Editar un vocabulari</title>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit_main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<sect1 id="setup"
+><title
+>Configuració</title>
+<para
+>Abans de començar a utilitzar una col·lecció de vocabulari o crear la vostra pròpia, és útil comprendre els diferents elements de &parley; i configurar-lo en conseqüència. Les següents seccions us guiaran pas a pas a través d'aquest procés. Hi ha diversos llocs en &parley; per a la configuració: </para>
+<itemizedlist>
+<listitem
+><para
+><menuchoice
+><guimenu
+>Fitxer</guimenu
+><guimenuitem
+>Propietats</guimenuitem
+></menuchoice
+> Aquest és el lloc per a les <quote
+>Propietats generals del document</quote
+>, &ead;, alguna informació sobre la vostra col·lecció de vocabulari i de tu mateix. </para
+></listitem>
+<listitem
+><para
+><menuchoice
+><guimenu
+>Edita</guimenu
+><guimenuitem
+>Idiomes</guimenuitem
+></menuchoice
+> Aquí trobareu les opcions relacionades quant a l'ús dels idiomes. </para
+></listitem>
+<listitem
+><para
+><menuchoice
+><guimenu
+>Exercici</guimenu
+><guimenuitem
+>Configura l'exercici</guimenuitem
+></menuchoice
+> Aquí hi ha les opcions sobre com practicar el vocabulari. Depenent del que feu durant la sessió específica d'aprenentatge es podran canviar sobre la marxa. </para
+></listitem>
+<listitem
+><para
+><menuchoice
+><guimenu
+>Arranjament</guimenu
+><guimenuitem
+>Configura &parley;</guimenuitem
+></menuchoice
+> Per les opcions de pantalla i de caràcter més general. </para
+></listitem>
+</itemizedlist>
+<sect2 id="about-the-collection"
+><title
+>Quant a la col·lecció</title>
+<para
+>La introducció de les metadades com un títol i la vostra informació de contacte és apropiada si feu disponible la vostra col·lecció per a altres persones. Utilitzeu <menuchoice
+><guimenu
+>Fitxer</guimenu
+><guimenuitem
+>Propietats</guimenuitem
+></menuchoice
+> per editar les dades. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="document_properties.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+<sect2 id="vocabulary-columns"
+><title
+>Columnes de vocabulari</title>
+<para
+>Depenent del tema a les vostres sessions d'aprenentatge, pot ser apropiat comptar amb més columnes de vocabulari a la secció d'edició. Per escollir aquestes columnes seleccioneu <guilabel
+>Visualitza</guilabel
+> a la barra de menús i després <guilabel
+>Columnes de vocabulari</guilabel
+>. Aquí podreu determinar si mostrar les columnes per a la <emphasis
+>Pronunciació, Tipus de paraula, Sinònim, Antònim, Exemple, Comentari</emphasis
+> i/o la <emphasis
+>Paràfrasi</emphasis
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="vocabulary_columns.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+<sect2 id="languages-and-grammar"
+><title
+>Idiomes i la gramàtica</title>
+<para
+>Establiu alguns detalls de la gramàtica perquè &parley; us ajudi. Utilitzeu l'opció <menuchoice
+><guimenu
+>Edita</guimenu
+><guimenuitem
+>Idiomes</guimenuitem
+></menuchoice
+> per manllevar el diàleg de la gramàtica. </para>
+<para
+>Els articles en anglès són simplement <guilabel
+>the</guilabel
+>, el qual és l'article definit, i <guilabel
+>a</guilabel
+> com a article indefinit. La majoria dels altres idiomes tenen més articles que es poden omplir a la pestanya d'articles. </para>
+<para
+>Per a la conjugació s'hauran d'omplir els pronoms personals. La majoria dels idiomes no tenen formes de conjugació diferents per a <quote
+>he/she/it</quote
+>, en aquest cas, <emphasis
+>no</emphasis
+> haureu de marcar <guilabel
+>El masculí i el femení tenen conjugacions diferents</guilabel
+>! Només cal introduir els pronoms per a les tres formes. </para>
+<para>
+<table>
+  <title
+>Pronoms personals en anglès</title>
+  <tgroup cols="3">
+  <tbody>
+  <row>
+    <entry
+></entry>
+    <entry
+>Singular</entry>
+    <entry
+>Plural</entry>
+  </row>
+  <row>
+    <entry
+>1a persona</entry>
+    <entry
+>I</entry>
+    <entry
+>we</entry>
+  </row>
+  <row>
+    <entry
+>2a persona</entry>
+    <entry
+>you</entry>
+    <entry
+>you</entry>
+  </row>
+  <row>
+    <entry
+>3a persona</entry>
+    <entry
+>he/she/it</entry>
+    <entry
+>they</entry>
+    </row>
+</tbody>
+  </tgroup>
+</table>
+</para>
+<para
+>Temps: En funció de l'idioma, pot introduir els temps adequats que després voleu aprendre a conjugar. Alguns exemples són: Present simple, Passat simple, Futur, &etc; </para>
+<para
+>Per cert. fent clic al botó <guilabel
+>Afegeix un idioma</guilabel
+> podreu afegir un idioma addicional a la vostra col·lecció. </para>
+<sect3 id="lets-have-a-closer-look-at-spanish"
+><title
+>Anem a donar una ullada més propera al castellà</title>
+<para
+>A la pestanya <guilabel
+>General</guilabel
+> hi ha les opcions bàsiques de l'idioma, com aquí </para>
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Idioma</guilabel
+> = Espanyol </para
+></listitem>
+<listitem
+><para
+><guilabel
+>Nom</guilabel
+> = Espanyol </para
+></listitem>
+<listitem
+><para
+><guilabel
+>Disposició del teclat</guilabel
+> = us (per a l'anglès) </para
+></listitem>
+</itemizedlist>
+<para
+>Podeu deixar en blanc la <guilabel
+>Disposició del teclat</guilabel
+> si no esteu segur sobre el que esteu utilitzant. Llavors, &parley;, simplement prendrà la disposició estàndard del vostre ordinador. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="lang_general.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Donem una ullada a la pestanya <guilabel
+>Articles</guilabel
+>: El castellà només coneix els substantius en masculí i femení, per tant, el camp <guilabel
+>Neutre</guilabel
+> romandrà buit. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="lang_articles.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Els <guilabel
+>Pronoms personals</guilabel
+> en castellà tenen múltiples formes per a la 3a persona del singular i la 1a, 2a i 3a persones del plural. Per mantenir la coherència, les possibilitats s'han d'introduir amb un signe <guilabel
+>/</guilabel
+> entre les dues formes. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="lang_personal_pronouns.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Sota <guilabel
+>Temps</guilabel
+> es troben els diferents temps que estan disponibles per a una forma verbal. Podeu afegir-los als que ja hi ha fent clic a <guilabel
+>Nou</guilabel
+>, modificar-los amb <guilabel
+>Modifica</guilabel
+> o en cas que alguna cosa realment no existeixi sols haureu de fer <guilabel
+>Suprimeix</guilabel
+> sobre el temps després de seleccionar-lo. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="lang_tenses.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="units"
+><title
+>Unitats</title>
+<para
+>A l'esquerra hi ha una llista de les unitats. Si heu iniciat una nova col·lecció, aquesta llista pot estar buida a excepció d'una unitat que es crea per omissió. </para>
+<para
+>Si no podeu veure la llista de les unitats, podríeu haver d'activar-la al menú <menuchoice
+><guimenu
+>Visualitza</guimenu
+><guimenuitem
+>Lliçons</guimenuitem
+></menuchoice
+>. </para>
+<para
+>Les caselles de selecció al davant del nom de la unitat mostren quines unitats s'inclouen actualment en el vostre exercici. El número al seu costat és el nombre de paraules en la unitat. </para>
+<sect2 id="new-unit"
+><title
+>Unitat nova</title>
+<para
+>Afegir una nova unitat: Seleccioneu el lloc on anirà aquesta unitat, per exemple, la col·lecció <guilabel
+>Les meves lliçons de castellà</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="new_lesson1.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Al menú Unitat, seleccioneu <guilabel
+>Unitat nova</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="new_lesson2.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Assegureu-vos de seleccionar el punt just en l'estructura d'arbre de les unitats abans de seleccionar <guilabel
+>Unitat nova</guilabel
+>. En el nostre cas, volem una <emphasis
+>subunitat</emphasis
+> de la <guilabel
+>Col·lecció: Les meves lliçons de castellà</guilabel
+>, aquesta és exactament la que s'ha de seleccionar abans de seguir endavant amb <guilabel
+>Unitat nova</guilabel
+>. </para>
+</sect2>
+<sect2 id="moving-renaming-and-deleting-units"
+><title
+>Moure, reanomenar i suprimir unitats</title>
+<para
+>Per canviar el nom d'una unitat, feu doble clic, o clic dret sobre la unitat i escolliu <guilabel
+>Reanomena la unitat</guilabel
+>. També es poden eliminar d'aquesta manera (però perdreu el seu contingut). </para>
+<para
+>Si no us agrada la disposició de les unitats, podeu moure una unitat amb el ratolí. La podreu arrossegar cap a una altra unitat, llavors es convertirà en un fill d'aquesta. </para>
+</sect2>
+<sect2 id="splitting-a-unit"
+><title
+>Dividir una unitat</title>
+<para
+>Si les vostres unitats es tornen massa grans, podreu optar per dividir-la en petites unitats per facilitar l'aprenentatge. 20 paraules per a una unitat probablement serà una bona mida. Feu clic dret sobre una unitat, o utilitzeu la unitat <menuchoice
+><guimenu
+>Unitat</guimenu
+><guimenuitem
+>Divideix la unitat en unitats més petites</guimenuitem
+></menuchoice
+> i la unitat serà dividida en unitats filles. Podreu escollir a l'atzar les paraules que es posaran a les noves unitats abans d'assignar-les, o mantenir-les en l'ordre original. </para>
+</sect2>
+<sect2 id="what-is-shown-in-the-table"
+><title
+>Què es mostra a la taula</title>
+<para
+>El &parley; sempre mostra les paraules de la unitat que heu seleccionat. També podeu activar veure les paraules contingudes en les subunitats en aquesta unitat. Per activar-ho utilitzeu <menuchoice
+><guimenu
+>Unitat</guimenu
+><guimenuitem
+>Mostra entrades de les unitats filles</guimenuitem
+></menuchoice
+>. D'aquesta manera, podreu navegar per totes les paraules seleccionant el document de la unitat a la part superior. </para>
+</sect2>
+</sect1>
+<sect1 id="word-types"
+><title
+>Tipus de paraula</title>
+<para
+>&parley; us permet tipus de paraules associades amb les paraules. Els tipus de paraula són per exemple: Noms, Verbs, Adjectius i Adverbis. </para>
+<para
+>Per tal de treballar amb tipus de paraules, activeu l'eina tipus de paraula: <menuchoice
+><guimenu
+>Visualitza</guimenu
+><guimenuitem
+>Tipus de paraula</guimenuitem
+></menuchoice
+>. </para>
+<para
+>Podeu classificar els tipus de paraules igual que les unitats. </para>
+<para
+>Si voleu veure totes les paraules d'un cert tipus -&pex;, tots els noms-, només haureu de seleccionar la categoria de substantiu, i a la taula només veureu els substantius. </para>
+<para
+>La forma més senzilla d'establir el tipus de paraula, és arrossegant i deixant anar una paraula en el seu tipus. Fins i tot es pot fer amb diverses paraules alhora. </para>
+
+<!-- empty sect2
+<sect2 id="words-or-sentences"
+><title
+>Words or Sentences</title>
+</sect2
+-->
+<sect2 id="adding-new-vocabulary"
+><title
+>Afegir un vocabulari nou</title>
+<para
+>Utilitzeu <guilabel
+>Afegeix una nova entrada</guilabel
+> a la barra d'eines per afegir paraules noves. Podeu començar a escriure la paraula en l'idioma matern. Després d'introduir la primera paraula, premeu la tecla &Tab; per anar al següent idioma. </para>
+</sect2>
+<sect2 id="editing-words"
+><title
+>Editar les paraules</title>
+<para
+>Si voleu substituir una paraula, seleccioneu la seva entrada i comenceu a escriure. Una altra manera per canviar la paraula, feu doble clic sobre l'entrada i podreu canviar el contingut de la cel·la sense perdre la paraula antiga. </para>
+<para
+>Premeu la tecla &Tab; per anar a la següent paraula mentre esteu en el mode d'edició. Amb la tecla &Intro; sortireu d'aquest mode. Podeu utilitzar les tecles de fletxa per moure-us. </para>
+</sect2>
+</sect1>
+<sect1 id="synonyms"
+><title
+>Sinònims</title>
+<para
+>Els sinònims són difícils d'establir, i no sempre funcionen gaire bé. Així i tot, heus aquí com establir-los: </para>
+<itemizedlist>
+<listitem
+><para
+>Utilitzeu <menuchoice
+><guimenu
+>Visualitza</guimenu
+><guimenuitem
+>Sinònims</guimenuitem
+></menuchoice
+> per veure l'eina de sinònims. </para
+></listitem>
+<listitem
+><para
+>Seleccioneu la primera paraula (A) per a la que voleu crear els sinònims, després feu clic sobre la segona paraula (B) </para
+></listitem>
+<listitem
+><para
+>El botó en l'eina de sinònims canviarà el text a <guilabel
+>A i B són sinònims</guilabel
+> </para
+></listitem>
+</itemizedlist>
+<para
+>Les paraules ara es mostraran com a connectades en l'eina de sinònims i podran ser reconegudes com a sinònims durant l'exercici. </para>
+</sect1>
+<sect1 id="adding-images"
+><title
+>Afegir imatges</title>
+<para
+>En primer lloc mostreu l'eina d'imatge seleccionant <guilabel
+>Visualitza</guilabel
+> a la barra de menús i feu clic a <guilabel
+>Imatge</guilabel
+>. La casella de selecció al davant de <guilabel
+>Imatge</guilabel
+> ara restarà activada. Aquesta es mostrarà a la secció d'imatges a la dreta de la pantalla del &parley;. </para>
+<para
+>Per afegir una imatge a una paraula, assegureu-vos que la paraula està ressaltada. Al costat dret de la secció de la imatge feu clic sobre la <emphasis
+>icona de carpeta</emphasis
+> i escolliu la imatge que voleu associar. En seleccionar una imatge per a una parella de traduccions, les cantonades inferiors dreta de les cel·les de les dues paraules es marcaran amb una bandera blava. En passar per sobre d'aquesta marca amb el cursor del ratolí es mostrarà el nom i el camí del fitxer d'imatge. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adding-images.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<!--para>
+The needed images can be obtained from Google search using &parley; inbuilt scripts.
+</para>
+<para>
+To obtain the image highlight a word in the list then choose <menuchoice
+><guimenu
+>Scripts</guimenu
+><guimenuitem
+>Fetch Image</guimenuitem
+></menuchoice
+> from the &parley; menu.
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Obtaining images from the Internet</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_006b.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Obtaining images from the Internet</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para>
+Choose the right image using <guibutton
+>Next</guibutton
+> and <guibutton
+>Previous</guibutton
+> buttons. You can correct the search criteria for the images using the corresponding text box.
+</para>
+<para>
+If you prefer only free images check the corresponding check box.
+</para>
+<para>
+When the selection is finished just click on <guibutton
+>OK</guibutton
+> and the image will be saved next to the current vocabulary file in the <filename role="directory"
+><replaceable
+>name_of_vocabulary</replaceable
+>_files</filename
+> subfolder.
+</para>
+<warning>
+<para>
+Due to the current script limitations the image files cannot be saved in the paths with Unicode symbols in the names of folders and files.
+</para>
+</warning-->
+</sect1>
+<sect1 id="adding-sound"
+><title
+>Afegir so</title>
+<para
+>En primer lloc mostreu l'eina de so, seleccioneu <guilabel
+>Visualitza</guilabel
+> a la barra de menús i després feu clic a <guilabel
+>Sons</guilabel
+>. Això mostrarà la secció de sons al costat dret de la pantalla del &parley;. </para>
+<para
+>Per afegir un so a una paraula, assegureu-vos que la paraula està ressaltada. A la secció de sons al costat dret, feu clic sobre la <emphasis
+>icona de carpeta</emphasis
+> i escolliu el so que voleu associar. En seleccionar un fitxer de so per a una parella de traduccions, les cantonades inferiors dreta de les cel·les de les dues paraules es marcaran amb una bandera vermella. En passar per sobre d'aquesta marca amb el cursor del ratolí es mostrarà el nom i el camí del fitxer de so. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adding-sound.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Els fitxers de so necessaris es poden obtenir des de la cerca de Wiktionary utilitzant els scripts de &parley; incorporats. </para>
+<para
+>Per obtenir el fitxer de so ressalteu una paraula de la llista i escolliu <menuchoice
+><guimenu
+>Scripts</guimenu
+><guimenuitem
+>Vés a buscar el so</guimenuitem
+></menuchoice
+> des del menú de &parley;. </para>
+<para
+>El fitxer de so es desarà al fitxer de vocabulari actual a la subcarpeta <filename role="directory"
+><replaceable
+>nom_del_vocabulari</replaceable
+>_files</filename
+>. </para>
+</sect1>
+<sect1 id="entering-comparison-forms"
+><title
+>Introduir les formes comparatives</title>
+<para
+>Per tal d'introduir les formes comparatives, assegureu-vos que l'eina formes comparatives està activada. L'obrireu amb el menú: <menuchoice
+><guimenu
+>Visualitza</guimenu
+><guimenuitem
+>Formes comparatives</guimenuitem
+></menuchoice
+>. </para>
+<para
+>Primer, seleccioneu una paraula que sigui un adjectiu o un adverbi. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="comparison_form.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Feu clic al botó <guilabel
+>Adjectiu</guilabel
+> o <guilabel
+>Adverbi</guilabel
+> en l'eina formes comparatives. </para>
+<!--para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_edit_comparison_form_2.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para-->
+<para
+>Introduïu les formes comparatives. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="comparison_form_edit.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ara podreu utilitzar el mode d'<link linkend="comparison-forms-of-adjectives-and-adverbs"
+>exercici de formes comparatives</link
+>. </para>
+</sect1>
+<sect1 id="entering-inflection-forms"
+><title
+>Introduir les formes d'inflexió</title>
+<para
+>Per tal d'introduir les formes d'inflexió, assegureu-vos que l'eina formes d'inflexió està activada. L'obrireu amb el menú: <menuchoice
+><guimenu
+>Visualitza</guimenu
+><guimenuitem
+>Inflexió (verbs, adjectius, noms)</guimenuitem
+></menuchoice
+>. </para>
+<para
+>Primer, seleccioneu una paraula que sigui un verb. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="conjugation.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Feu clic al botó <guilabel
+>Verb</guilabel
+> en l'eina d'inflexions. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="conjugation_edit.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Després seleccioneu el temps correcte a la casella de selecció de temps i introduïu les formes de conjugació. </para>
+<para
+>Els temps es poden configurar per a cada idioma: <link linkend="languages-and-grammar"
+>Idiomes i la gramàtica</link
+>. </para>
+<para
+>Ara podreu utilitzar el mode d'<link linkend="conjugations"
+>exercici de les conjugacions</link
+>. </para>
+<para
+>Utilitzeu el botó <guibutton
+>Substantiu</guibutton
+> o <guibutton
+>Adjectiu</guibutton
+> per afegir formes declinades al vostre vocabulari. </para
+></sect1>
+<sect1 id="creating-new-files"
+><title
+>Crear fitxers nous</title>
+<para
+>En aquesta secció es descriu com crear fitxers nous i això no només amb la part d'aprenentatge de vocabulari habitual, sinó també per als exercicis de gramàtica, matemàtiques, &etc; </para>
+<sect2 id="new-collection--vocabulary-english-german"
+><title
+>Col·lecció nova: Vocabulari anglès-alemany</title>
+<para
+>En aquesta secció es descriu com podreu crear un fitxer d'entrenament del vocabulari incloent-hi imatges i sons. En una segona etapa també hi afegirem adjectius i verbs. Aquest és un exemple molt complet i per tant molt llarg. Finalment no seran necessaris tots els punts per al vostre projecte. </para>
+<para
+>Ja que volem afegir fitxers de so i imatges, ens haurem d'assegurar que aquests estaran en una carpeta que per comoditat s'anomena <emphasis
+>eng-deu</emphasis
+>. El fitxer de dades que creem amb &parley; serà desat en la mateixa carpeta. Això us ajudarà molt quan decidiu compartir el vostre treball amb els altres. </para>
+<para
+>Això és el que tenim en matèria de fitxers de so i imatges: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Folder_with_sound_and_pictures.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Començarem des del <guilabel
+>Tauler</guilabel
+>, el qual es mostra quan inicieu el &parley;: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="dashboard.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Feu clic al botó <guilabel
+>Crea una col·lecció nova</guilabel
+>. </para>
+<para
+>La pàgina <guilabel
+>Propietats generals del document</guilabel
+> s'omple de la següent manera (la qual varia segons el document): </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="general_document_properties.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Després feu clic a <guilabel
+>D'acord</guilabel
+>. La següent pantalla us demana que establiu els detalls de l'idioma. Aquí no volem canviar res i per tant, simplement feu clic a <guilabel
+>D'acord</guilabel
+>. </para>
+<para
+>Com a primer pas, crearem la part del vocabulari. Pensarem a afegir-hi fitxers de so i imatges en una segona etapa. La unitat es veurà així: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="new_empty_collection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Abans de fer res més, desarem el fitxer a la carpeta amb els fitxers de so i imatges. Utilitzeu <menuchoice
+><guimenu
+>Fitxer</guimenu
+><guimenuitem
+>Desa</guimenuitem
+></menuchoice
+> i seleccioneu la carpeta utilitzant la navegació. En aquest exemple anomenarem al fitxer <guilabel
+>Trainer eng-deu</guilabel
+> -una vegada introduït el nom simplement feu clic a desa-. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="save_new_collection.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Si ara marqueu la vostra carpeta on es troben els fitxers de so i les imatges, també hi trobareu el fitxer <guilabel
+>Trainer eng-deu.kvtml</guilabel
+>. </para>
+<para
+>Donem una breu ullada a les paraules que volem afegir: <emphasis
+>«apple», «bird», «cat», «cherry», «cow», «orange», «pear», «snake», «strawberry»</emphasis
+>. Tenim animals i fruites, i per tant ens decidirem a crear dues unitats anomenades: <guilabel
+>Animals</guilabel
+> i <guilabel
+>Fruits</guilabel
+>. </para>
+<para
+>Ara canvieu el nom de la <guilabel
+>Lliçó 1</guilabel
+> a <guilabel
+>Animals</guilabel
+> i a continuació afegim una unitat anomenada <guilabel
+>Fruits</guilabel
+>. Feu clic dret sobre la <guilabel
+>Lliçó 1</guilabel
+> i escolliu <guilabel
+>Reanomena la unitat</guilabel
+> des de les eleccions mostrades. Ara la <guilabel
+>Lliçó 1</guilabel
+> restarà ressaltada i la podreu simplement sobreescriure, escrivint <guilabel
+>Animals</guilabel
+>. En acabar, premeu la tecla &Intro;. Ara feu clic dret a la <guilabel
+>Col·lecció: Entrenador del vocabulari E...</guilabel
+>, la qual és l'arrel de l'arbre d'unitats i escolliu <guilabel
+>Unitat nova</guilabel
+> des de les opcions mostrades. En el nou camp escriviu <guilabel
+>Fruits</guilabel
+> i premeu la tecla &Intro; una altra vegada. </para>
+<para
+>En primer lloc, inserirem els animals. Si us plau, feu clic sobre la unitat <guilabel
+>Animals</guilabel
+> i obtindreu una taula buida que podreu omplir. Feu clic amb el ratolí en el primer camp, i introduïu-hi els termes font. A continuació, introduïu els termes de destinació en la segona columna. Una vegada col·locats els 4 noms dels animals en anglès amb la seva traducció a l'alemany, la pantalla es veurà així: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_004.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>En el nostre cas només volem 4 entrades en la unitat dels animals. Hi haurà moltes línies en blanc que s'hauran d'eliminar. Per fer-ho, primer feu clic al camp buit, i manteniu premuda la tecla &Maj; mentre feu clic a l'últim camp buit. Totes les línies a esborrar seran ressaltades. A continuació, premeu la tecla <keycap
+>Supr</keycap
+>. </para>
+<para
+>Afegirem la terminologia de la fruita. Simplement feu clic al nom de la unitat <guilabel
+>Fruits</guilabel
+>. Aquesta segona unitat està completament buida. Com que tenim cinc termes de la fruita caldrà que afegim cinc línies. Per tant, premeu la tecla <keycap
+>Inser</keycap
+> cinc vegades i, a continuació, com abans, hi afegirem la nostra terminologia. </para>
+<para
+>No us oblideu de desar de tant en tant... </para>
+<para
+>Un clic sobre l'arrel del nostre arbre d'unitat <guilabel
+>Col·lecció: Entrenador del vocabulari E...</guilabel
+> i &parley; ens mostrarà totes les entrades presents a les dues unitats: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_005.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ara és el moment d'afegir sons i imatges. En primer lloc activarem les vistes imatge i sons. Des de la barra de menús seleccioneu <guilabel
+>Visualitza</guilabel
+> i llavors feu clic <guilabel
+>Imatge</guilabel
+> i a <guilabel
+>So</guilabel
+>. Una vegada activades aquestes opcions, es mostraran dues noves seccions a la part dreta de la pantalla d'edició del &parley;: <emphasis
+>Imatge</emphasis
+> i <emphasis
+>So</emphasis
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_006.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Seleccioneu la paraula en anglès <emphasis
+>«apple»</emphasis
+> fent clic sobre seu. Es ressaltarà, de manera que podrem afegir-hi una imatge. A la secció d'imatge a la part dreta, feu clic a la icona de <guilabel
+>Carpeta</guilabel
+> i escolliu la imatge que hi voleu associar. </para>
+<para
+>Per afegir la pronunciació en anglès per a «<guilabel
+>Apple</guilabel
+>», feu el mateix a la secció de so, seleccioneu el fitxer de so corresponent. </para>
+<para
+>En fer clic al botó <guilabel
+>Reprodueix</guilabel
+> en l'eina de so podreu escoltar la pronunciació. </para>
+<para
+>La pantalla es veurà així: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_007.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>A continuació, feu clic sobre la traducció a l'alemany per a «<guilabel
+>Apfel</guilabel
+>». El camp estarà ressaltat per indicar la selecció. Notareu que la imatge amb la poma també estarà associada amb el terme en alemany. A la secció de sons seleccioneu la pronunciació, com abans. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_008.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Simplement haureu de continuar igual per a tots els termes. </para>
+<para
+>És hora d'afegir adjectius i verbs com a unitats al nostre projecte. De manera que haureu de fer com abans amb la unitat <emphasis
+>Fruits</emphasis
+> i crear dues noves unitats: <emphasis
+>Adjectives</emphasis
+> i <emphasis
+>Verbs</emphasis
+>. Suposem que afegirem <emphasis
+>«big», «small», «old», «young», «narrow»</emphasis
+> a la unitat d'adjectius i <emphasis
+>«to go», «to come», «to buy», «to drink», «to eat»</emphasis
+> a la unitat dels verbs. </para>
+<para
+>A continuació es mostra una captura de pantalla amb tota la terminologia inserida. Ara, les paraules es barrejaran i seria bo per veure quina és un <emphasis
+>substantiu, adjectiu</emphasis
+> o <emphasis
+>verb</emphasis
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_009.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>A mesura que el següent pas mostri el <guilabel
+>Tipus de paraula</guilabel
+>. Seleccioneu <guilabel
+>Visualitza</guilabel
+> a la barra de menús i després seleccioneu <guilabel
+>Columnes de vocabulari</guilabel
+>. Activarem <guilabel
+>Tipus de paraula</guilabel
+> per a l'<emphasis
+>anglès</emphasis
+> i l'<emphasis
+>alemany</emphasis
+>, feu clic a la casella de selecció <guilabel
+>Tipus de paraula</guilabel
+>. Després feu clic a <guilabel
+>D'acord</guilabel
+> per acceptar els canvis. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_010.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>En fer clic als camps de la columna <guilabel
+>Tipus de paraula</guilabel
+> podreu seleccionar el tipus de paraula i els idiomes en què els substantius tenen gènere, també podreu seleccionar la combinació de <emphasis
+>substantiu/gènere</emphasis
+>. De manera alternativa començareu a escriure els primers caràcters d'un tipus de paraula per a seleccionar-la. Sota la columna <guilabel
+>Tipus de paraula</guilabel
+> amb part de les seleccions que ja ho han fet. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_011.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Una vegada especificats tots els tipus de paraules, en primer lloc examinarem els <emphasis
+>adjectius</emphasis
+>, afegint les <guilabel
+>Formes comparatives</guilabel
+>. De manera que anirem a la unitat de només <emphasis
+>adjectius</emphasis
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_012.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Per mostrar les <guilabel
+>Formes comparatives</guilabel
+> a la part dreta de la pantalla, seleccioneu <guilabel
+>Visualitza</guilabel
+> a la barra de menús i activeu la casella de selecció <guilabel
+>Formes comparatives</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_013.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Editeu les <guilabel
+>Formes comparatives</guilabel
+> afegint <guilabel
+>Comparatiu</guilabel
+> i <guilabel
+>Superlatiu</guilabel
+> als adjectius individuals. En primer lloc, feu clic sobre l'adjectiu per al qual voleu afegir les formes comparatives, en el nostre cas «<emphasis
+>big</emphasis
+>», i afegiu «<emphasis
+>bigger</emphasis
+>» i «<emphasis
+>biggest</emphasis
+>». Després, continueu amb el següent adjectiu a completar, fins a introduir totes les formes comparatives. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_014.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Finalment, considerem la forma de <guilabel
+>Conjugació</guilabel
+> dels <guilabel
+>Verbs</guilabel
+>. Seleccioneu la unitat <guilabel
+>Verbs</guilabel
+> i després activeu la secció de la conjugació al costat dret seleccionant <guilabel
+>Visualitza</guilabel
+> des de la barra de menús i activant la <guilabel
+>Conjugació</guilabel
+>. Com a exemple, podem editar el temps present (<guilabel
+>Präsens</guilabel
+>) forma de «<emphasis
+>gehen</emphasis
+>». Si us plau, seleccioneu primer <guilabel
+>Präsens</guilabel
+> des del menú desplegable i després afegiu-hi les formes verbals. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_trainer_eng-deu_0-9-4_015.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Això s'ha de fer per a tots els verbs, i en tots els temps possibles. </para>
+<para
+>Un cop acabeu podreu començar a practicar fent clic sobre el botó <link linkend="vocabulary-practice"
+><guilabel
+>Exercici</guilabel
+></link
+>. </para>
+</sect2>
+<sect2 id="new-collection:-single-names-and-collective-names"
+><title
+>Col·lecció nova: Noms individuals i noms col·lectius</title>
+<para
+>Aquest exercici s'ha creat per a la classe de tercer d'una escola de primària italiana. Se suposa que els alumnes relacionen noms individuals amb noms col·lectius, com «<emphasis
+>tree</emphasis
+>» → «<emphasis
+>woods</emphasis
+>» </para>
+<para
+>Quan comenceu amb el &parley; obtindreu la pàgina d'inici, finalment també llistarà alguns fitxers que hagin estat utilitzats (el qual no es pot veure aquí). </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="initial_screen.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Feu clic a <guilabel
+>Crea una nova col·lecció</guilabel
+> i es mostrarà la següent pantalla amb camps buits o parcialment omplerts: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_create_new_exercise_collective_names1.png" format="PNG"/><!--FIXME update screenshot-->
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ompliu el títol, aquí <guilabel
+>nomi singoli e collettivi</guilabel
+>, el vostre nom, adreça de correu electrònic, a la secció <guilabel
+>Comentari</guilabel
+> podreu escriure una descripció més detallada, seleccioneu la categoria i la llicència. Després tenim quelcom especial: en comptes d'indicar el primer i segon idioma, com normalment ho havíeu fet, afegirem «<emphasis
+>nome singolo</emphasis
+>» (nom únic) i «<emphasis
+>nome collettivo</emphasis
+>» (nom col·lectiu). <guilabel
+>Estableix els detalls gramaticals</guilabel
+> i <guilabel
+>Baixa gramàtica</guilabel
+> no són necessaris aquí. A la captura de pantalla encara estan activades -si us plau, desactiveu-les fent clic a les caselles de selecció-. Una vegada fet, feu clic a <guilabel
+>D'acord</guilabel
+>. </para>
+<para
+>Seleccioneu <menuchoice
+><guimenu
+>Visualitza</guimenu
+><guimenuitem
+>Idiomes</guimenuitem
+></menuchoice
+> i apareixerà la pàgina <guilabel
+>Propietats per nome singolo</guilabel
+>, aquí es veu ja amb els canvis realitzats: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_create_new_exercise_collective_names4.png" format="PNG"/><!--FIXME update screenshot-->
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Al costat esquerre es poden veure les dades que esteu afegint. «<emphasis
+>nome singolo</emphasis
+>». Escolliu l'idioma, aquí <emphasis
+>Italià</emphasis
+> i inseriu «<emphasis
+>nome singolo</emphasis
+>» en el següent camp d'edició. Després feu clic a <guilabel
+>D'acord</guilabel
+>. </para>
+<para
+>Ara es mostrarà la pàgina <guilabel
+>Propietats per nome collettivo</guilabel
+>: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_create_new_exercise_collective_names5.png" format="PNG"/><!--FIXME update screenshot-->
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Com abans: escolliu <guilabel
+>Italià</guilabel
+> com a idioma, inseriu «<emphasis
+>nome collettivo</emphasis
+>» i feu clic a <guilabel
+>D'acord</guilabel
+>. </para>
+<para
+>I ara podreu començar a editar: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_create_new_exercise_collective_names7.png" format="PNG"/><!--FIXME update screenshot-->
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Només caldrà inserir el «<emphasis
+>nome singolo</emphasis
+>» (nom únic) a la primera columna i el corresponent «<emphasis
+>nome collettivo</emphasis
+>» (nom col·lectiu) a la segona. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_create_new_exercise_collective_names8.png" format="PNG"/><!--FIXME update screenshot-->
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Si el nombre de camps disponibles no és suficient, simplement feu clic dret en qualsevol part de la secció d'edició i escolliu <guilabel
+>Afegeix una nova entrada</guilabel
+>. No us oblideu de desar el fitxer de tant en tant. En acabar d'afegir-hi les entrades haureu de veure si el mode de l'exercici funciona bé. Bé, només cal fer clic al botó <guilabel
+>Exercici</guilabel
+> de la dreta sobre la secció d'edició i apareixerà la pàgina amb les opcions de l'exercici: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="Parley_create_new_exercise_collective_names10.png" format="PNG"/><!--FIXME update screenshot-->
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>En aquest cas, <guilabel
+>Elecció múltiple</guilabel
+> és una bona opció, però també <guilabel
+>Escrita</guilabel
+>. Després d'escollir el mode de l'exercici només caldrà fer clic sobre <guilabel
+>Inicia l'exercici</guilabel
+> i divertir-vos. </para>
+</sect2>
+</sect1>
+<sect1 id="getting-additional-collections"
+><title
+>Obtenir col·leccions addicionals</title>
+<para
+>Quan us trobeu al <guilabel
+>Tauler</guilabel
+> disposareu de la possibilitat d'instal·lar col·leccions directament des del servidor, sempre que estigueu connectats. Simplement feu clic a <guilabel
+>Descarrega col·leccions noves</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="dashboard.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>S'obrirà una finestra amb moltes col·leccions interessants. Només haureu de seleccionar la que us resulti més interessant i fer clic a <guilabel
+>Instal·la</guilabel
+>. A continuació, obriu el fitxer per a practicar o editar. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get_new_stuff.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect1>
+<sect1 id="configure-parley"
+><title
+>Configurar &parley;</title>
+<para
+>Podreu configurar l'aparença del &parley; des del <guilabel
+>Tauler</guilabel
+> o des de dins de la <guilabel
+>Secció d'edició</guilabel
+>. Seleccioneu <guilabel
+>Arranjament</guilabel
+> des de la barra de menús i després <guilabel
+>Configura el &parley;</guilabel
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="configure_parley.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<sect2 id="theme-tab"
+><title
+>La pestanya Tema</title>
+<para
+>S'obrirà la configuració amb la secció del <guilabel
+>Tema</guilabel
+>. Aquest és el lloc on podreu escollir la forma com &parley; hauria de donar-vos la benvinguda quan es llanci: una elegant versió <guilabel
+>Gris</guilabel
+>, les <guilabel
+>Abelles</guilabel
+> per als ocupats. Tingueu present que <guilabel
+>Fluffy Bunny</guilabel
+> podria no estar a la vostra versió: si el voleu, llegiu la següent secció. </para>
+<para
+>Una vegada seleccionat el vostre tema preferit, feu clic a <guilabel
+>D'acord</guilabel
+>. </para>
+<para
+>Les captures de pantalla per al tema <guilabel
+>Abelles</guilabel
+>: </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="practice_bees.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>I si això no és suficient: podeu fer clic a <guilabel
+>Obtén temes nous</guilabel
+> per trobar més temes. Amb el temps esperem que n'hi hagi més i més. Si coneixeu com crear gràfics SVG (per exemple, amb <ulink url="https://inkscape.org"
+><application
+>Inkscape</application
+></ulink
+>), podeu crear el vostre propi tema i compartir-lo amb el món. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="configure_theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Els temes addicionals es poden trobar a <ulink url="https://store.kde.org/browse/cat/357/order/latest/"
+>store.kde.org</ulink
+>. </para>
+</sect2>
+<sect2 id="general-tab"
+><title
+>La pestanya General</title>
+<para
+>La pestanya <guilabel
+>General</guilabel
+> us ofereix algunes opcions relatives al comportament del &parley;. </para>
+<sect3 id="open-save-options"
+><title
+>Les opcions obre/desa</title>
+<para
+><guilabel
+>Carrega sempre la darrera col·lecció oberta en començar</guilabel
+> agafarà immediatament el vocabulari que estàveu aprenent. Sovint s'utilitza juntament amb la segona opció <guilabel
+>Desa els vocabularis automàticament en tancar i sortir</guilabel
+>, la qual és molt útil per a no respondre sempre la mateixa pregunta i si s'han de desar o no els canvis (incloent-hi els resultats de l'aprenentatge). L'opció <guilabel
+>Crea una còpia de seguretat cada «...» minuts</guilabel
+> pot ser molt útil per ajudar-vos a desar el vostre treball amb freqüència. Una cosa menys en què pensar. </para>
+<para
+>De vegades, la importació i/o exportació dels fitxers de text (CSV) pot ser molt útil i necessitareu el separador apropiat per elaborar les dades o ser capaç de llegir les que heu rebut d'un altre lloc. &parley; us permet escollir entre diversos separadors per assegurar-vos que podreu tornar-les a utilitzar. </para>
+</sect3>
+<sect3 id="editing-option"
+><title
+>L'opció edita</title>
+<para
+>Aquí podreu determinar si &parley; annexarà automàticament les files noves mentre esteu editant la vostra col·lecció de vocabulari. Això pot ser útil si voleu afegir moltes entrades, abans de dividir aquestes dades en diverses unitats. D'altra banda, pot ser bo tenir aquesta opció si voleu treballar creant unitats amb un nombre màxim d'entrades. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="configure_generalconfig.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect3>
+</sect2>
+<sect2 id="view-tab"
+><title
+>La pestanya Visualitza</title>
+<para
+>Els <guilabel
+>Arranjaments de visualització</guilabel
+> us permeten canviar el tipus de lletra i la mida dels símbols de pronunciació, i podreu escollir els <guilabel
+>Color de base per a mostrar les puntuacions</guilabel
+> que més us agradin. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="configure_view.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+</sect1>
+</chapter>
+<!--FIXME Parley is not available on Windows in 16.04
+<chapter id="parley-on-windows"
+><title
+>Parley on Windows</title>
+<para
+>It is possible to install Parley together with other <ulink url="https://edu.kde.org"
+>Educational software</ulink
+> on Windows systems. For further info please visit <ulink url="https://community.kde.org/Windows"
+>this page</ulink
+>.
+</para>
+<para
+>The steps to be followed in short:
+</para>
+<para
+>Download the installer <ulink url="https://windows.kde.org/download.php"
+>here</ulink>
+</para>
+<para
+>Then follow the installation procedure like for any other Windows software.
+</para>
+<para
+>When you come to the <guilabel
+>Package selection screen</guilabel
+>, select the language(s) you wish the software to be available in <emphasis
+>and</emphasis
+> the package - in this case <guilabel
+>kdeedu</guilabel
+>. If you don't select any language you will automatically get English.
+</para>
+<para
+>Then finish the installation process by clicking on next, following the coming screens just like you normally do with other windows software.
+</para>
+<para
+>Please note that the Parley team does not deal with the Windows-Installer and therefore we cannot easily answer your questions. Should you have difficulties, please contact the KDE-Windows team directly. You can do so by subscribing to the mailing list <ulink url="https://mail.kde.org/mailman/listinfo/kde-windows"
+>here</ulink
+> or join them on IRC at irc://irc.libera.chat Channel: #kde-windows.
+</para>
+</chapter>
+-->
+<chapter id="notes-for-advanced-users"
+><title
+>Notes per a usuaris avançats</title>
+<!--
+<sect1 id="using-parley-for-exam-preparation"
+><title
+>Using Parley for Exam Preparation</title>
+<itemizedlist>
+<listitem
+><para
+> what to bear in mind with long questions / answers?
+</para
+></listitem>
+<listitem
+><para
+> how to start  with a new Exam
+</para
+></listitem>
+<listitem
+><para
+>example 1 with capitals
+</para
+></listitem>
+<listitem
+><para
+> example 2 with sentence
+</para
+></listitem>
+</itemizedlist>
+</sect1>
+-->
+<sect1 id="upload-and-share-collections"
+><title
+>Publicar i compartir les col·leccions</title>
+<para
+>També podreu publicar els vostres fitxers i compartir-los amb els altres usuaris. </para>
+<para
+>Utilitzeu <guimenuitem
+>Penja un document de vocabulari</guimenuitem
+> des del menú «Fitxer» en l'editor del &parley;. </para>
+<para
+>Si això no funciona, també podreu visitar <ulink url="https://store.kde.org/"
+>store.kde.org</ulink
+>. </para>
+<para
+>En qualsevol cas, els fitxers es mostraran en el diàleg <guilabel
+>Descarrega noves col·leccions</guilabel
+> al <guilabel
+>Tauler</guilabel
+>. </para>
+</sect1>
+<sect1 id="file-format"
+><title
+>Format de fitxer</title>
+<para
+>Si esteu interessat en els formats de fitxer que pot llegir el &parley; i desar-ne les col·leccions de vocabulari, visiteu: </para>
+<para
+><ulink url="https://userbase.kde.org/Parley/FileFormats"
+>Formats de fitxer del &parley; a userbase.kde.org</ulink>
+</para>
+</sect1>
+
+<!-- empty sect1
+<sect1 id="scripting"
+><title
+>Scripting</title>
+</sect1
+-->
+</chapter>
+<!--userbase-content-->
+
+<chapter id="credits">
+
+<title
+>Crèdits i llicència</title>
+
+<sect1 id="thanks">
+<title
+>Gràcies</title>
+
+<para
+>M'agradaria donar les gràcies personalment a les següents persones per la seva contribució al &parley;:</para>
+<itemizedlist>
+<listitem
+><para
+>Peter Hedlund, per mantenir viu el KVocTrain i començar el port al KDE 4, el qual finalment es convertiria en el &parley;</para
+></listitem>
+
+<listitem
+><para
+>David Capel</para
+></listitem>
+<listitem
+><para
+>Avgoustinos Kadis</para
+></listitem>
+<listitem
+><para
+>Daniel Laidig</para
+></listitem>
+<listitem
+><para
+>Johannes Simon</para
+></listitem>
+</itemizedlist>
+
+<para
+>També vull agrair a totes les altres persones sense nom, en especial a l'equip &kde;, per la seva ajuda, crítica constructiva, suggeriments o informes d'error.</para>
+
+</sect1>
+
+<sect1 id="copyright">
+<title
+>Copyright</title>
+
+<para
+>Copyright del &parley; 2007-2010 &Frederik.Gladhorn; &Frederik.Gladhorn.mail; </para>
+
+<para
+>Copyright de la documentació 2010 &Frederik.Gladhorn; &Frederik.Gladhorn.mail;, Sabine Eller <email
+>s.eller@voxhumanitatis.org</email
+> i Daniel Laidig <email
+>d.laidig@gmx.de</email
+>; 2014 Amarvir Singh <email
+>amarvir.ammu.93@gmail.com</email
+> </para>
+
+<para
+>Traductor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </sect1>
+
+</chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

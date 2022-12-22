@@ -1,0 +1,197 @@
+<ui version="4.0" >
+ <author>Peter Hedlund</author>
+ <class>GeneralOptionsBase</class>
+ <widget class="QWidget" name="GeneralOptionsBase" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>401</width>
+    <height>244</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" >
+   <item>
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="title" >
+      <string>Open/Save</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2" >
+      <item>
+       <widget class="QCheckBox" name="kcfg_AutoOpenLast" >
+        <property name="toolTip" >
+         <string>Always open the collection that was active when quitting Parley</string>
+        </property>
+        <property name="whatsThis" >
+         <string>When this option is checked, the last active collection will be loaded automatically when starting Parley instead of showing the welcome screen.</string>
+        </property>
+        <property name="text" >
+         <string>Always load the last opened collection on start</string>
+        </property>
+        <property name="checked" >
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_AutoSave" >
+        <property name="toolTip" >
+         <string>Allow automatic saving of your work</string>
+        </property>
+        <property name="whatsThis" >
+         <string>Your work will be automatically saved if you check this option</string>
+        </property>
+        <property name="text" >
+         <string>&amp;Save vocabularies automatically on close and quit</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" >
+        <item>
+         <widget class="QCheckBox" name="kcfg_AutoBackup" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip" >
+           <string>Allow automatic saving of your work</string>
+          </property>
+          <property name="whatsThis" >
+           <string>Your work will be automatically saved if you check this option</string>
+          </property>
+          <property name="text" >
+           <string>&amp;Create a backup every</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="kcfg_BackupTime" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblBackupInterva" >
+          <property name="sizePolicy" >
+           <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text" >
+           <string>minutes</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" >
+        <item>
+         <widget class="QLabel" name="label_sep" >
+          <property name="text" >
+           <string>Sep&amp;arator for text file import/export (CSV):</string>
+          </property>
+          <property name="buddy" >
+           <cstring>kcfg_SeparatorCombo</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="KComboBox" name="kcfg_SeparatorCombo" >
+          <property name="minimumSize" >
+           <size>
+            <width>140</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="toolTip" >
+           <string>Choose which separator you want to use to separate your data when importing and exporting text.</string>
+          </property>
+          <property name="whatsThis" >
+           <string>Choose the separator to use to divide the parts of an expression when importing or exporting data as text.</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2" >
+     <property name="title" >
+      <string>Editing</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout" >
+      <item>
+       <widget class="QCheckBox" name="kcfg_SmartAppend" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Fixed" hsizetype="Preferred" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip" >
+         <string/>
+        </property>
+        <property name="whatsThis" >
+         <string/>
+        </property>
+        <property name="text" >
+         <string>&amp;Append new rows automatically when editing</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer" >
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+  <customwidgets>
+  <customwidget>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>kcfg_AutoSave</tabstop>
+  <tabstop>kcfg_BackupTime</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

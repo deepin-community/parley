@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kvtml PUBLIC "kvtml2.dtd" "http://edu.kde.org/kvtml/kvtml2.dtd">
+<kvtml version="2.0">
+  <information>
+    <generator>Parley 0.9.4</generator>
+    <title>Feature Test Document</title>
+    <author>Daniel Laidig, Frederik Gladhorn</author>
+    <license>GPLv2+ (GNU General Public License version 2 or later)</license>
+    <comment>This is a document created during the parley mini sprint 2010</comment>
+    <date>2010-07-07</date>
+    <category>Testing</category>
+  </information>
+  <identifiers>
+    <identifier id="0">
+      <name>German</name>
+      <locale>de</locale>
+      <article>
+        <singular>
+          <definite>
+            <male>der</male>
+            <female>die</female>
+            <neutral>das</neutral>
+          </definite>
+          <indefinite>
+            <male>ein</male>
+            <female>eine</female>
+            <neutral>ein</neutral>
+          </indefinite>
+        </singular>
+        <plural>
+          <definite>
+            <male>die</male>
+            <female>die</female>
+            <neutral>die</neutral>
+          </definite>
+        </plural>
+      </article>
+      <personalpronouns>
+        <singular>
+          <firstperson>ich</firstperson>
+          <secondperson>du</secondperson>
+          <thirdpersonneutralcommon>er/sie/es</thirdpersonneutralcommon>
+        </singular>
+        <plural>
+          <firstperson>wir</firstperson>
+          <secondperson>ihr</secondperson>
+          <thirdpersonneutralcommon>sie</thirdpersonneutralcommon>
+        </plural>
+      </personalpronouns>
+      <tense>Präteritum</tense>
+      <tense>Perfekt</tense>
+      <tense>Plusquamperfekt</tense>
+      <tense>Präsens</tense>
+      <tense>Futur I</tense>
+      <tense>Futur II</tense>
+    </identifier>
+    <identifier id="1">
+      <name>English</name>
+      <locale>en</locale>
+      <article>
+        <singular>
+          <definite>
+            <male>the</male>
+            <female>the</female>
+            <neutral>the</neutral>
+          </definite>
+          <indefinite>
+            <male>a</male>
+            <female>a</female>
+            <neutral>a</neutral>
+          </indefinite>
+        </singular>
+        <plural>
+          <definite>
+            <male>the</male>
+            <female>the</female>
+            <neutral>the</neutral>
+          </definite>
+          <indefinite>
+            <male>a</male>
+            <female>a</female>
+            <neutral>a</neutral>
+          </indefinite>
+        </plural>
+      </article>
+      <personalpronouns>
+        <singular>
+          <firstperson>I</firstperson>
+          <secondperson>you</secondperson>
+          <thirdpersonneutralcommon>he/she/it</thirdpersonneutralcommon>
+        </singular>
+        <plural>
+          <firstperson>we</firstperson>
+          <secondperson>you</secondperson>
+          <thirdpersonneutralcommon>they</thirdpersonneutralcommon>
+        </plural>
+      </personalpronouns>
+      <tense>Simple Present</tense>
+      <tense>Simple Past</tense>
+      <tense>Simple Future (will)</tense>
+      <tense>Present Perfect</tense>
+      <tense>Past Perfect</tense>
+      <tense>Future Perfect</tense>
+      <tense>Present Progressive</tense>
+      <tense>Past Progressive</tense>
+      <tense>Future Progressive</tense>
+      <tense>Present Perfect Progressive</tense>
+      <tense>Past Perfect Progressive</tense>
+      <tense>Future Perfect Progressive</tense>
+    </identifier>
+  </identifiers>
+  <entries>
+    <entry id="0">
+      <translation id="0">
+        <text>hallo</text>
+        <grade>
+          <currentgrade>1</currentgrade>
+          <count>1</count>
+          <errorcount>0</errorcount>
+          <date>2010-04-10T18:41:08</date>
+        </grade>
+      </translation>
+      <translation id="1">
+        <text>hello</text>
+      </translation>
+    </entry>
+    <entry id="1">
+      <translation id="0">
+        <text>Tisch</text>
+        <grade>
+          <currentgrade>1</currentgrade>
+          <count>1</count>
+          <errorcount>0</errorcount>
+          <date>2010-04-10T18:41:36</date>
+        </grade>
+      </translation>
+      <translation id="1">
+        <text>table</text>
+      </translation>
+    </entry>
+    <entry id="2">
+      <translation id="0">
+        <text>danke</text>
+        <grade>
+          <currentgrade>1</currentgrade>
+          <count>1</count>
+          <errorcount>0</errorcount>
+          <date>2010-04-10T18:41:17</date>
+        </grade>
+      </translation>
+      <translation id="1">
+        <text>thanks</text>
+      </translation>
+    </entry>
+    <entry id="3">
+      <translation id="0">
+        <text>Baum</text>
+        <grade>
+          <currentgrade>1</currentgrade>
+          <count>1</count>
+          <errorcount>0</errorcount>
+          <date>2010-04-10T19:58:47</date>
+        </grade>
+        <pronunciation>baʊ̯m</pronunciation>
+        <image>tree_de.jpg</image>
+        <sound>De-Baum.ogg</sound>
+      </translation>
+      <translation id="1">
+        <text>tree</text>
+        <pronunciation>tɹiː</pronunciation>
+        <image>tree_en.jpg</image>
+        <sound>En-uk-tree.ogg</sound>
+      </translation>
+    </entry>
+    <entry id="4">
+      <translation id="0">
+        <text>der Tisch</text>
+      </translation>
+      <translation id="1">
+        <text>table</text>
+      </translation>
+    </entry>
+    <entry id="5">
+      <translation id="0">
+        <text>der Stuhl</text>
+      </translation>
+      <translation id="1">
+        <text>chair</text>
+      </translation>
+    </entry>
+    <entry id="6">
+      <translation id="0">
+        <text>das Haus</text>
+      </translation>
+      <translation id="1">
+        <text>house</text>
+      </translation>
+    </entry>
+    <entry id="7">
+      <translation id="0">
+        <text>die Flasche</text>
+      </translation>
+      <translation id="1">
+        <text>bottle</text>
+      </translation>
+    </entry>
+    <entry id="8">
+      <translation id="0"/>
+      <translation id="1"/>
+    </entry>
+    <entry id="9">
+      <translation id="0">
+        <text>groß</text>
+        <comparison>
+          <comparative>
+            <text>größer</text>
+          </comparative>
+          <superlative>
+            <text>am größten</text>
+          </superlative>
+        </comparison>
+      </translation>
+      <translation id="1">
+        <text>big</text>
+        <comparison>
+          <comparative>
+            <text>bigger</text>
+          </comparative>
+          <superlative>
+            <text>the biggest</text>
+          </superlative>
+        </comparison>
+      </translation>
+    </entry>
+    <entry id="10">
+      <translation id="0">
+        <text>schön</text>
+        <comparison>
+          <comparative>
+            <text>schöner</text>
+          </comparative>
+          <superlative>
+            <text>am schönsten</text>
+          </superlative>
+        </comparison>
+      </translation>
+      <translation id="1">
+        <text>beautiful</text>
+        <comparison>
+          <comparative>
+            <text>more beautiful</text>
+          </comparative>
+          <superlative>
+            <text>the most beautiful</text>
+          </superlative>
+        </comparison>
+      </translation>
+    </entry>
+    <entry id="11">
+      <translation id="0">
+        <text>dick</text>
+        <grade>
+          <currentgrade>1</currentgrade>
+          <count>1</count>
+          <errorcount>0</errorcount>
+          <date>2010-04-10T20:34:37</date>
+        </grade>
+        <comparison>
+          <comparative>
+            <text>dicker</text>
+          </comparative>
+          <superlative>
+            <text>am dicksten</text>
+          </superlative>
+        </comparison>
+      </translation>
+      <translation id="1">
+        <text>thick</text>
+        <comparison>
+          <comparative>
+            <text>thicker</text>
+          </comparative>
+          <superlative>
+            <text>the thickest</text>
+          </superlative>
+        </comparison>
+      </translation>
+    </entry>
+    <entry id="12">
+      <translation id="0">
+        <text>unordentlich</text>
+        <comparison>
+          <comparative>
+            <text>unordentlicher</text>
+          </comparative>
+          <superlative>
+            <text>am unordentlichsten</text>
+          </superlative>
+        </comparison>
+      </translation>
+      <translation id="1">
+        <text>messy</text>
+        <comparison>
+          <comparative>
+            <text>more messy</text>
+          </comparative>
+          <superlative>
+            <text>the most messy</text>
+          </superlative>
+        </comparison>
+      </translation>
+    </entry>
+    <entry id="13">
+      <translation id="0">
+        <text>oft</text>
+        <grade>
+          <currentgrade>1</currentgrade>
+          <count>1</count>
+          <errorcount>0</errorcount>
+          <date>2010-04-10T20:34:23</date>
+        </grade>
+        <comparison>
+          <comparative>
+            <text>öfter</text>
+          </comparative>
+          <superlative>
+            <text>am öftesten</text>
+          </superlative>
+        </comparison>
+      </translation>
+      <translation id="1">
+        <text>often</text>
+        <comparison>
+          <comparative>
+            <text>more often</text>
+          </comparative>
+          <superlative>
+            <text>the most often</text>
+          </superlative>
+        </comparison>
+      </translation>
+    </entry>
+    <entry id="14">
+      <translation id="0">
+        <text>Kerze</text>
+      </translation>
+      <translation id="1">
+        <text>candle</text>
+        <grade>
+          <currentgrade>2</currentgrade>
+          <count>1</count>
+          <errorcount>0</errorcount>
+          <date>2010-05-26T14:51:08</date>
+        </grade>
+        <example>Like a candle in the wind.</example>
+      </translation>
+    </entry>
+    <entry id="15">
+      <translation id="0"/>
+      <translation id="1"/>
+    </entry>
+    <entry id="16">
+      <translation id="0">
+        <text>Müll</text>
+      </translation>
+      <translation id="1">
+        <text>trash</text>
+        <grade>
+          <currentgrade>2</currentgrade>
+          <count>1</count>
+          <errorcount>0</errorcount>
+          <date>2010-05-28T23:20:53</date>
+        </grade>
+      </translation>
+    </entry>
+    <entry id="17">
+      <translation id="0">
+        <text>Abfall</text>
+      </translation>
+      <translation id="1">
+        <text>litter</text>
+        <grade>
+          <currentgrade>1</currentgrade>
+          <count>2</count>
+          <errorcount>1</errorcount>
+          <date>2010-05-28T23:20:58</date>
+        </grade>
+      </translation>
+    </entry>
+    <entry id="18">
+      <translation id="0">
+        <text>Dreck</text>
+      </translation>
+      <translation id="1">
+        <text>waste</text>
+        <grade>
+          <currentgrade>2</currentgrade>
+          <count>1</count>
+          <errorcount>0</errorcount>
+          <date>2010-05-28T23:20:38</date>
+        </grade>
+      </translation>
+    </entry>
+    <entry id="19">
+      <translation id="0"/>
+      <translation id="1"/>
+    </entry>
+    <entry id="20">
+      <translation id="0"/>
+      <translation id="1"/>
+    </entry>
+    <entry id="21">
+      <translation id="0"/>
+      <translation id="1"/>
+    </entry>
+    <entry id="22">
+      <translation id="0">
+        <text>gehen</text>
+        <conjugation>
+          <tense>Präsens</tense>
+          <singular>
+            <firstperson>
+              <text>gehe</text>
+            </firstperson>
+            <secondperson>
+              <text>gehst</text>
+            </secondperson>
+            <thirdpersonneutralcommon>
+              <text>geht</text>
+            </thirdpersonneutralcommon>
+          </singular>
+          <plural>
+            <firstperson>
+              <text>gehen</text>
+            </firstperson>
+            <secondperson>
+              <text>geht</text>
+            </secondperson>
+            <thirdpersonneutralcommon>
+              <text>gehen</text>
+            </thirdpersonneutralcommon>
+          </plural>
+        </conjugation>
+      </translation>
+      <translation id="1">
+        <text>to go</text>
+        <conjugation>
+          <tense>Simple Present</tense>
+          <singular>
+            <firstperson>
+              <text>go</text>
+            </firstperson>
+            <secondperson>
+              <text>go</text>
+            </secondperson>
+            <thirdpersonneutralcommon>
+              <text>goes</text>
+            </thirdpersonneutralcommon>
+          </singular>
+          <plural>
+            <firstperson>
+              <text>go</text>
+            </firstperson>
+            <secondperson>
+              <text>go</text>
+            </secondperson>
+            <thirdpersonneutralcommon>
+              <text>go</text>
+            </thirdpersonneutralcommon>
+          </plural>
+        </conjugation>
+      </translation>
+    </entry>
+    <entry id="23">
+      <translation id="0">
+        <text>sein</text>
+        <conjugation>
+          <tense>Präsens</tense>
+          <singular>
+            <firstperson>
+              <text>bin</text>
+            </firstperson>
+            <secondperson>
+              <text>bist</text>
+            </secondperson>
+            <thirdpersonneutralcommon>
+              <text>ist</text>
+            </thirdpersonneutralcommon>
+          </singular>
+          <plural>
+            <firstperson>
+              <text>sind</text>
+            </firstperson>
+            <secondperson>
+              <text>seit</text>
+            </secondperson>
+            <thirdpersonneutralcommon>
+              <text>sind</text>
+            </thirdpersonneutralcommon>
+          </plural>
+        </conjugation>
+      </translation>
+      <translation id="1">
+        <text>to be</text>
+        <conjugation>
+          <tense>Simple Present</tense>
+          <singular>
+            <firstperson>
+              <text>am</text>
+            </firstperson>
+            <secondperson>
+              <text>are</text>
+            </secondperson>
+            <thirdpersonneutralcommon>
+              <text>is</text>
+            </thirdpersonneutralcommon>
+          </singular>
+          <plural>
+            <firstperson>
+              <text>are</text>
+            </firstperson>
+            <secondperson>
+              <text>are</text>
+            </secondperson>
+            <thirdpersonneutralcommon>
+              <text>are</text>
+            </thirdpersonneutralcommon>
+          </plural>
+        </conjugation>
+      </translation>
+    </entry>
+    <entry id="24">
+      <translation id="0">
+        <text>schlürfen</text>
+        <conjugation>
+          <tense>Präsens</tense>
+          <singular>
+            <firstperson>
+              <text>schlürfe</text>
+            </firstperson>
+            <secondperson>
+              <text>schlürfst</text>
+            </secondperson>
+          </singular>
+        </conjugation>
+      </translation>
+      <translation id="1">
+        <text>to slurp</text>
+        <conjugation>
+          <tense>Simple Present</tense>
+          <singular>
+            <firstperson>
+              <text>slurp</text>
+            </firstperson>
+            <secondperson>
+              <text>slurp</text>
+            </secondperson>
+            <thirdpersonneutralcommon>
+              <text>slurps</text>
+            </thirdpersonneutralcommon>
+          </singular>
+        </conjugation>
+      </translation>
+    </entry>
+    <entry id="25">
+      <translation id="0">
+        <text>$$f(z) = \frac{1}{2\pi\mathrm{i}}\oint_{|z - \zeta| = 1}\frac{f(\zeta)}{\zeta-z}\mathrm{d}\zeta$$</text>
+      </translation>
+      <translation id="1">
+        <text>math test</text>
+        <grade>
+          <currentgrade>1</currentgrade>
+          <count>4</count>
+          <errorcount>4</errorcount>
+          <date>2010-05-10T19:13:56</date>
+        </grade>
+      </translation>
+    </entry>
+    <entry id="26">
+      <translation id="0">
+        <text>§§This is a \LaTeX{} \textbf{markup} test.\\\texttt{With multiple lines.}§§</text>
+      </translation>
+      <translation id="1">
+        <text>general LaTeX test</text>
+        <grade>
+          <currentgrade>1</currentgrade>
+          <count>5</count>
+          <errorcount>5</errorcount>
+          <date>2010-05-10T20:22:03</date>
+        </grade>
+      </translation>
+    </entry>
+    <entry id="27">
+      <translation id="0">
+        <text>§§This\\will\\be\\very\\long\\and\\space\\consuming\\which\\is\\not\\optimal\\for\\the\\practice\\layout.§§</text>
+      </translation>
+      <translation id="1">
+        <text>long text test</text>
+        <grade>
+          <currentgrade>1</currentgrade>
+          <count>1</count>
+          <errorcount>1</errorcount>
+          <date>2010-05-10T19:14:12</date>
+        </grade>
+      </translation>
+    </entry>
+    <entry id="28">
+      <translation id="0">
+        <text>$$\frac{3}{6}$$</text>
+      </translation>
+      <translation id="1">
+        <text>$$\frac{1}{2}$$</text>
+      </translation>
+    </entry>
+    <entry id="29">
+      <translation id="0"/>
+      <translation id="1"/>
+    </entry>
+  </entries>
+  <lessons>
+    <container>
+      <name>Normal words</name>
+      <entry id="0"/>
+      <entry id="1"/>
+      <entry id="2"/>
+    </container>
+    <container>
+      <name>Pronunciation, Sound, Image</name>
+      <entry id="3"/>
+    </container>
+    <container>
+      <name>Articles</name>
+      <entry id="4"/>
+      <entry id="5"/>
+      <entry id="6"/>
+      <entry id="7"/>
+      <entry id="8"/>
+    </container>
+    <container>
+      <name>Adjectives</name>
+      <entry id="9"/>
+      <entry id="10"/>
+      <entry id="11"/>
+      <entry id="12"/>
+      <entry id="13"/>
+    </container>
+    <container>
+      <name>Verbs and conjugations</name>
+    </container>
+    <container>
+      <name>Example Sentences</name>
+      <entry id="14"/>
+      <entry id="15"/>
+    </container>
+    <container>
+      <name>Synonyms</name>
+      <entry id="16"/>
+      <entry id="17"/>
+      <entry id="18"/>
+      <entry id="19"/>
+      <entry id="20"/>
+      <entry id="21"/>
+    </container>
+    <container>
+      <name>Verbs, Conjugations</name>
+      <entry id="22"/>
+      <entry id="23"/>
+      <entry id="24"/>
+    </container>
+    <container>
+      <name>LaTeX</name>
+      <inpractice>true</inpractice>
+      <entry id="25"/>
+      <entry id="26"/>
+      <entry id="27"/>
+      <entry id="28"/>
+      <entry id="29"/>
+    </container>
+  </lessons>
+  <wordtypes>
+    <container>
+      <name>Noun</name>
+      <specialwordtype>noun</specialwordtype>
+      <container>
+        <name>Masculine</name>
+        <specialwordtype>noun/male</specialwordtype>
+        <entry id="3">
+          <translation id="0"/>
+        </entry>
+        <entry id="4">
+          <translation id="0"/>
+        </entry>
+        <entry id="5">
+          <translation id="0"/>
+        </entry>
+      </container>
+      <container>
+        <name>Feminine</name>
+        <specialwordtype>noun/female</specialwordtype>
+        <entry id="7">
+          <translation id="0"/>
+        </entry>
+      </container>
+      <container>
+        <name>Neuter</name>
+        <specialwordtype>noun/neutral</specialwordtype>
+        <entry id="6">
+          <translation id="0"/>
+        </entry>
+      </container>
+    </container>
+    <container>
+      <name>Verb</name>
+      <specialwordtype>verb</specialwordtype>
+      <entry id="22">
+        <translation id="0"/>
+        <translation id="1"/>
+      </entry>
+      <entry id="23">
+        <translation id="0"/>
+        <translation id="1"/>
+      </entry>
+      <entry id="24">
+        <translation id="0"/>
+        <translation id="1"/>
+      </entry>
+      <container>
+        <name>Regular Verb</name>
+      </container>
+      <container>
+        <name>Irregular</name>
+      </container>
+      <container>
+        <name>-ar</name>
+        <entry id="2">
+          <translation id="0"/>
+        </entry>
+      </container>
+      <container>
+        <name>-er</name>
+      </container>
+      <container>
+        <name>-ir</name>
+      </container>
+    </container>
+    <container>
+      <name>Adjective</name>
+      <specialwordtype>adjective</specialwordtype>
+      <entry id="9">
+        <translation id="0"/>
+        <translation id="1"/>
+      </entry>
+      <entry id="10">
+        <translation id="0"/>
+        <translation id="1"/>
+      </entry>
+      <entry id="11">
+        <translation id="0"/>
+        <translation id="1"/>
+      </entry>
+    </container>
+    <container>
+      <name>Adverb</name>
+      <specialwordtype>adverb</specialwordtype>
+      <entry id="13">
+        <translation id="0"/>
+        <translation id="1"/>
+      </entry>
+    </container>
+  </wordtypes>
+  <leitnerboxes>
+    <container>
+      <name>Box 7 (best)</name>
+    </container>
+    <container>
+      <name>Box 6</name>
+    </container>
+    <container>
+      <name>Box 5</name>
+    </container>
+    <container>
+      <name>Box 4</name>
+    </container>
+    <container>
+      <name>Box 3</name>
+    </container>
+    <container>
+      <name>Box 2</name>
+    </container>
+    <container>
+      <name>Box 1 (lowest)</name>
+    </container>
+  </leitnerboxes>
+  <synonym>
+    <pair>
+      <entry id="16">
+        <translation id="0"/>
+      </entry>
+      <entry id="18">
+        <translation id="0"/>
+      </entry>
+    </pair>
+    <pair>
+      <entry id="16">
+        <translation id="0"/>
+      </entry>
+      <entry id="17">
+        <translation id="0"/>
+      </entry>
+    </pair>
+    <pair>
+      <entry id="16">
+        <translation id="1"/>
+      </entry>
+      <entry id="17">
+        <translation id="1"/>
+      </entry>
+    </pair>
+    <pair>
+      <entry id="16">
+        <translation id="1"/>
+      </entry>
+      <entry id="18">
+        <translation id="1"/>
+      </entry>
+    </pair>
+    <pair>
+      <entry id="17">
+        <translation id="0"/>
+      </entry>
+      <entry id="18">
+        <translation id="0"/>
+      </entry>
+    </pair>
+    <pair>
+      <entry id="17">
+        <translation id="1"/>
+      </entry>
+      <entry id="18">
+        <translation id="1"/>
+      </entry>
+    </pair>
+  </synonym>
+</kvtml>

@@ -1,0 +1,2 @@
+rm_conffile /etc/xdg/parley.knsrc 4:20.12.1-1~
+rm_conffile /etc/xdg/parley-themes.knsrc 4:20.12.1-1~

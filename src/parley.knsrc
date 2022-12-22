@@ -1,0 +1,7 @@
+[KNewStuff3]
+ProvidersUrl=http://edu.kde.org/parley/newstuff/providers44.xml
+TargetDir=kvtml
+Uncompress=archive
+Categories=Parley Vocabulary Files,KWordQuiz
+UploadCategories=Parley
+

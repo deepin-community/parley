@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="parleyrc">
+    <parameter name="fileurl" />
+  </kcfgfile>
+  <group name="Document $(fileurl)">
+    <entry name="ConjugationTenses" type="StringList">
+      <label>Selected tenses for conjugation practice.</label>
+      <whatsthis>Selected tenses for conjugation practice.</whatsthis>
+      <default></default>
+    </entry>
+    <entry name="VisibleColumns" type="IntList">
+    	<label>Visible columns in the main editor window.</label>
+    	<whatsthis>Visible columns in the main editor window.</whatsthis>
+	</entry>
+    <entry name="CollapsedStatisticsViewItems" type="StringList">
+        <label>Collapsed tree view items of statistics view window.</label>
+        <whatsthis>Collapsed tree view items of statistics view window.</whatsthis>
+        <default></default>
+    </entry>
+</group>
+</kcfg>
